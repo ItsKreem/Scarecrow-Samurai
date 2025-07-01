@@ -24,40 +24,21 @@ public class EnemyAttack : EnemyKnockback
         if (Time.time >= lastAttackTime + attackCooldown)
         {
             float distance = Vector2.Distance(transform.position, player.position);
-            if (distance <= attackRange)
-            {
-                Attack();
-                lastAttackTime = Time.time;
-            }
+            //if (distance <= attackRange)
+            //{
+    
+            //    lastAttackTime = Time.time;
+            //}
         }
     }
 
-    void Attack()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        parryLight.SetActive(true);
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerLayer);
-        if (hit != null)
-            {
-                PlayerParry parry = hit.GetComponent<PlayerParry>();
-
-                if (parry != null && parry.IsParrying)
-                {
-                    // Parry successful
-                    StunAndKnockback();
-                    parryLight.SetActive(false);
-                }
-                else
-                {
-                    // Deal damage
-                    Health playerHealth = hit.GetComponent<Health>();
-                    if (playerHealth != null)
-                    {
-                        playerHealth.TakeDamage(damage);
-                        KnockbackPlayer(hit.transform);
-                        StartCoroutine(PauseAfterHit());
-                    }
-                }
-            }
+        Health targetHealth = other.GetComponent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.Damage(1, gameObject);
+        }
     }
 
     void StunAndKnockback()
@@ -81,18 +62,18 @@ public class EnemyAttack : EnemyKnockback
         }
     }
 
-    void KnockbackPlayer(Transform player)
+    public void KnockbackPlayer(Transform player)
     {
         Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
         if (playerRb != null)
         {
             Vector2 knockDir = (player.position.x > transform.position.x) ? Vector2.right : Vector2.left;
-            playerRb.velocity = Vector2.zero; // reset before knock
-            playerRb.AddForce(((5f * knockDir) + Vector2.up * 1f) * 350f); 
+            //playerRb.velocity = Vector2.zero; // reset before knock
+            playerRb.AddForce(((1f * knockDir) + Vector2.up * 1f) * 350f); 
         }
     }
 
-    IEnumerator PauseAfterHit()
+    IEnumerator Pause()
     {
         EnemyController controller = GetComponent<EnemyController>();
         if (controller != null)

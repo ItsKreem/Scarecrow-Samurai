@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerParry : MonoBehaviour
 {
+    public GameObject parryField;
     public float parryWindow = 0.3f;
     public KeyCode parryKey = KeyCode.LeftShift;
     public bool IsParrying { get; private set; }
@@ -35,6 +36,7 @@ public class PlayerParry : MonoBehaviour
 
     void StartParry()
     {
+        parryField.SetActive(true);
         IsParrying = true;
         parryStartTime = Time.time;
 
@@ -50,6 +52,7 @@ public class PlayerParry : MonoBehaviour
 
         if (playerMovement != null)
             playerMovement.enabled = true; // Re-enable movement
+        parryField.SetActive(false);
     }
 }
 
