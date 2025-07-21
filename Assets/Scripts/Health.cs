@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    private float _currentHealth = 10f;
+    private float _currentHealth = 3f;
     private bool _canDamage = true;
 
 
@@ -59,6 +59,9 @@ public class Health : MonoBehaviour
             return;
 
         _currentHealth -= damage;
+
+        Debug.Log(source + " has taken " + damage + " damage.");
+
         if (HurtAudio != null)
         {
             GameObject.Instantiate(HurtAudio, transform.position, Quaternion.identity);

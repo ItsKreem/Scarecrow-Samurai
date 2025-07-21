@@ -38,11 +38,16 @@ public class EnemyProjectile : EnemyAttack
         }
         else if (!isReflected && collision.CompareTag("Player"))
         {
-            HitPlayer(targetHealth);
+            Debug.Log("Collided with player");
+            HitPlayer(collision);
         }
         else if (isReflected && collision.CompareTag("Enemy"))
         {
-            HitEnemy(targetHealth);
+            HitEnemy(collision);
+        }
+        else if(!isReflected && collision.CompareTag("Ground"))
+        {
+            //put effect here
         }
     }
 
@@ -67,22 +72,27 @@ public class EnemyProjectile : EnemyAttack
         }
     }
 
-    public void HitPlayer(Health playerHealth)
+    public void HitPlayer(Collider2D other)
     {
-        playerHealth = player.gameObject.GetComponent<Health>();
-
-        if (playerHealth != null)
+        if(((1 << other.gameObject.layer) & playerLayer) != 0)
         {
-            playerHealth.Damage(1, gameObject);
+            Health playerHealth = other.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                playerHealth.Damage(1, gameObject);
+            }
         }
     }
 
-    public void HitEnemy(Health enemyHealth)
+    public void HitEnemy(Collider2D other)
     {
-        enemyHealth = enemy.GetComponent<Health>();
-        if (enemyHealth != null)
+        if (((1 << other.gameObject.layer) & enemyLayer) != 0)
         {
-            enemyHealth.Damage(3, gameObject);
+            Health enemyHealth = other.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.Damage(3, gameObject);
+            }
         }
     }
 

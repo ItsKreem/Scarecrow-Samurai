@@ -2,37 +2,71 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : EnemyAttack
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class EnemyController : MonoBehaviour
 {
+    [Header("Movement")]
     public float patrolSpeed = 2f;
     public float chaseSpeed = 4f;
-    public float detectionRange = 5f;
     public Transform[] patrolPoints;
-    public Transform player;
     private int currentPoint = 0;
-    private bool chasing = false;
 
+    [Header("Detection")]
+    public Transform player;
+    public float detectionRange = 5f;
+    public float leapTriggerDistance = 3f;
+    public float waitBeforeLeap = 1f;
+
+    [Header("Leap Attack")]
+    public float leapForce = 12f;
+    public GameObject attackHitbox;
+
+    [Header("Parry")]
+    public float parryStunDuration = 1.2f;
+    public bool isParried = false;
+
+    [Header("Cooldown")]
+    public Cooldown leapCooldown;
+
+    private bool isLeaping = false;
+    private bool chasing = false;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        if (attackHitbox != null) attackHitbox.SetActive(false);
+
+        if (leapCooldown == null)
+            leapCooldown = new Cooldown { Duration = 3f };
     }
 
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (isParried || isLeaping || leapCooldown.IsOnCooldown)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
 
-        if (distanceToPlayer <= detectionRange)
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distToPlayer <= detectionRange)
         {
             chasing = true;
         }
-        else if (distanceToPlayer > detectionRange + 1f)
+        else if (distToPlayer > detectionRange + 1f)
         {
             chasing = false;
         }
 
-        if (chasing)
+        if (distToPlayer <= leapTriggerDistance)
+        {
+            StartCoroutine(LeapTowardPlayer());
+        }
+        else if (chasing)
         {
             ChasePlayer();
         }
@@ -58,7 +92,69 @@ public class EnemyController : EnemyAttack
     {
         Vector2 direction = player.position - transform.position;
         rb.velocity = new Vector2(Mathf.Sign(direction.x) * chaseSpeed, rb.velocity.y);
+    }
 
-        //maybe put the start of attack() here 
+    IEnumerator LeapTowardPlayer()
+    {
+        isLeaping = true;
+        rb.velocity = Vector2.zero;
+
+        float timer = 0f;
+        while (timer < waitBeforeLeap)
+        {
+            if (isParried)
+            {
+                isLeaping = false;
+                yield break;
+            }
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        if (isParried)
+        {
+            isLeaping = false;
+            yield break;
+        }
+
+        Vector2 leapDir = (player.position - transform.position).normalized;
+        rb.AddForce(leapDir * leapForce, ForceMode2D.Impulse);
+
+        if (attackHitbox != null)
+        {
+            attackHitbox.SetActive(true);
+            yield return new WaitForSeconds(0.25f);
+            attackHitbox.SetActive(false);
+        }
+
+        leapCooldown.StartCooldown();
+        isLeaping = false;
+    }
+
+    public void OnParried(Vector2 knockbackDir, float knockbackForce)
+    {
+        if (isParried) return;
+
+        StopAllCoroutines();
+        rb.velocity = Vector2.zero;
+        rb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+        isParried = true;
+        StartCoroutine(RecoverFromParry());
+    }
+
+    IEnumerator RecoverFromParry()
+    {
+        yield return new WaitForSeconds(parryStunDuration);
+        isParried = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Called when enemy collides with the player's ParryField
+        if (collision.gameObject.CompareTag("Parry"))
+        {
+            Vector2 knockbackDir = (transform.position - player.position).normalized;
+            OnParried(knockbackDir, 10f); // Adjust knockback force if needed
+        }
     }
 }
