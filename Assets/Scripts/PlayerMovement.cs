@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
     private float moveInput;
+    private bool isFacingRight = true;
 
     [Header("Ground Check")]
     public LayerMask groundLayer;
@@ -18,16 +19,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Double Jump")]
     private bool canDoubleJump;
 
+    [Header("Screw Attack")]
+    public bool isScrewAttacking = false;
+    public float screwAttackDuration = 0.4f;
+    public GameObject screwAttackHitbox;
+
     [Header("Dash")]
     public float dashForce = 20f;
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
 
-    [Header("Screw Attack")]
-    public bool isScrewAttacking = false;
-    public float screwAttackDuration = 0.4f;
-    public GameObject screwAttackHitbox;
 
     public Animator animator;
     private Rigidbody2D rb;
@@ -35,57 +37,103 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal");
 
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        CheckGroundStatus();
+        HandleWalk();
+        HandleJump();
+        HandleScrewAttack();
+        HandleDash();
+    }
 
-        if (!isDashing)
-        {
-            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        }
+    // ---------------- METHODS ---------------- //
 
-        // Ground check
+    void CheckGroundStatus()
+    {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-        // Reset double jump when grounded
         if (isGrounded)
-        {;
+        {
             canDoubleJump = true;
             animator.SetBool("IsJumping", false);
         }
+    }
 
-        // Jump
-        if (Input.GetButtonDown("Jump"))
+    void HandleWalk()
+    {
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        FlipPlayer();
+    }
+
+    void HandleJump()
+    {
+        if (Input.GetButtonDown("Jump") && !isScrewAttacking)
         {
-            animator.SetBool("IsJumping", true);
             if (isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                animator.SetBool("IsJumping", true);
             }
             else if (canDoubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJump = false;
+                animator.SetBool("IsJumping", true);
             }
         }
+    }
 
-        // Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-
-        // Screw Attack
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded)
+    void HandleScrewAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !isGrounded && !isScrewAttacking)
         {
             StartCoroutine(ScrewAttack());
         }
     }
 
+    void FlipPlayer()
+    {
+        if (moveInput > 0 && !isFacingRight)
+        {
+            isFacingRight = true;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (moveInput < 0 && isFacingRight)
+        {
+            isFacingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+    void HandleDash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            Debug.Log("Shift pressed");
+            StartCoroutine(Dash());
+        }
+    }
+
+    IEnumerator ScrewAttack()
+    {
+        isScrewAttacking = true;
+
+        if (screwAttackHitbox != null)
+            screwAttackHitbox.SetActive(true);
+
+        yield return new WaitForSeconds(screwAttackDuration);
+
+        if (screwAttackHitbox != null)
+            screwAttackHitbox.SetActive(false);
+
+        isScrewAttacking = false;
+    }
     IEnumerator Dash()
     {
         canDash = false;
@@ -102,22 +150,11 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    IEnumerator ScrewAttack()
-    {
-        isScrewAttacking = true;
-        if (screwAttackHitbox != null)
-            screwAttackHitbox.SetActive(true);
-
-        yield return new WaitForSeconds(screwAttackDuration);
-
-        if (screwAttackHitbox != null)
-            screwAttackHitbox.SetActive(false);
-        isScrewAttacking = false;
-    }
-
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
+
 }
+

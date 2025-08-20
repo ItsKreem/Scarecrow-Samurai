@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
 
     public AudioSource HurtAudio;
 
+    public GameObject hitVFX;
+
     public float CurrentHealth
     {
         get
@@ -62,11 +64,19 @@ public class Health : MonoBehaviour
 
         Debug.Log(source + " has taken " + damage + " damage.");
 
+        // Play hurt audio
         if (HurtAudio != null)
         {
             GameObject.Instantiate(HurtAudio, transform.position, Quaternion.identity);
         }
 
+        // Play hit VFX
+        if (hitVFX != null)
+        {
+            Instantiate(hitVFX, transform.position, Quaternion.identity);
+        }
+
+        // Death check
         if (_currentHealth <= 0f)
         {
             _currentHealth = 0f;
@@ -78,6 +88,7 @@ public class Health : MonoBehaviour
 
         OnHit?.Invoke(source);
     }
+
 
     public void Die()
     {

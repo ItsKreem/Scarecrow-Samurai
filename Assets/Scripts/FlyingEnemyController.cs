@@ -4,25 +4,33 @@ using UnityEngine;
 
 public class FlyingEnemyController : MonoBehaviour
 {
-    public Transform[] patrolPoints; // Assign in inspector
+    [Header("Movement & Patrol")]
     public float patrolSpeed = 2f;
-    public float chaseSpeed = 3.5f;
     public float waitTimeAtPoint = 2f;
+    [Tooltip("How far from spawn the enemy can patrol (X = horizontal range, Y = vertical range)")]
+    public Vector2 patrolRange = new Vector2(10f, 8f);
+
+    [Header("Chase & Combat")]
+    public float chaseSpeed = 3.5f;
     public float detectionRadius = 6f;
-    public LayerMask playerLayer;
     public float stopDistance = 4f;
+    public LayerMask playerLayer;
     public GameObject projectilePrefab;
     public Transform shootPoint;
     public float shootInterval = 2f;
 
     private Transform player;
-    private int currentPatrolIndex = 0;
+    private Vector2 spawnPosition;
+    private Vector2 patrolTarget;
     private float waitTimer = 0f;
     private float shootTimer = 0f;
     private bool playerDetected = false;
+    private bool isFacingRight = true; // NEW: track enemy facing direction
 
     void Start()
     {
+        spawnPosition = transform.position;
+        ChooseNewPatrolTarget();
     }
 
     void Update()
@@ -31,6 +39,7 @@ public class FlyingEnemyController : MonoBehaviour
 
         if (playerDetected && player != null)
         {
+            FlipTowardsPlayer(); // NEW: flip to face player
             ChasePlayer();
             HandleShooting();
         }
@@ -57,20 +66,26 @@ public class FlyingEnemyController : MonoBehaviour
 
     void Patrol()
     {
-        if (patrolPoints.Length == 0) return;
-
-        Transform targetPoint = patrolPoints[currentPatrolIndex];
-        transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, patrolSpeed * Time.deltaTime);
-
-        if (Vector2.Distance(transform.position, targetPoint.position) < 0.1f)
+        if (Vector2.Distance(transform.position, patrolTarget) < 0.2f)
         {
             waitTimer += Time.deltaTime;
             if (waitTimer >= waitTimeAtPoint)
             {
-                currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+                ChooseNewPatrolTarget();
                 waitTimer = 0f;
             }
         }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolTarget, patrolSpeed * Time.deltaTime);
+        }
+    }
+
+    void ChooseNewPatrolTarget()
+    {
+        float xOffset = Random.Range(-patrolRange.x, patrolRange.x);
+        float yOffset = Random.Range(-patrolRange.y, patrolRange.y);
+        patrolTarget = spawnPosition + new Vector2(xOffset, yOffset);
     }
 
     void ChasePlayer()
@@ -103,8 +118,31 @@ public class FlyingEnemyController : MonoBehaviour
         }
     }
 
+    void FlipTowardsPlayer()
+    {
+        if (player == null) return;
+
+        float directionToPlayer = player.position.x - transform.position.x;
+
+        if (directionToPlayer > 0 && !isFacingRight)
+        {
+            isFacingRight = true;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (directionToPlayer < 0 && isFacingRight)
+        {
+            isFacingRight = false;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
     void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.cyan;
+        Vector3 center = Application.isPlaying ? spawnPosition : transform.position;
+        Vector3 size = new Vector3(patrolRange.x * 2f, patrolRange.y * 2f, 1f);
+        Gizmos.DrawWireCube(center, size);
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }

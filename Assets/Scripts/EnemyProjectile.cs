@@ -6,21 +6,24 @@ public class EnemyProjectile : EnemyAttack
     public float lifeTime = 5f;
     public GameObject parryEffect;
     public LayerMask enemyLayer;
+    public LayerMask groundLayer; // <-- Add ground layer reference
 
     private Vector2 moveDirection;
     private bool isReflected = false;
 
     public GameObject player;
 
+    [Header("SFX")]
+    public GameObject parrySFX;
 
     private void Start()
     {
-
+        Destroy(gameObject, lifeTime);
     }
+
     public void Initialize(Vector2 direction)
     {
         moveDirection = direction.normalized;
-        Destroy(gameObject, lifeTime);
     }
 
     void Update()
@@ -30,6 +33,13 @@ public class EnemyProjectile : EnemyAttack
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Check collision with ground layer
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Health targetHealth = collision.GetComponent<Health>();
 
         if (!isReflected && collision.CompareTag("Parry"))
@@ -45,21 +55,20 @@ public class EnemyProjectile : EnemyAttack
         {
             HitEnemy(collision);
         }
-        else if(!isReflected && collision.CompareTag("Ground"))
-        {
-            //put effect here
-        }
     }
 
     void ReflectProjectile()
     {
         isReflected = true;
-        speed *= 1.2f; 
+        speed *= 1.2f;
 
         if (parryEffect)
             Instantiate(parryEffect, transform.position, Quaternion.identity);
 
-        // Flip direction
+        if (parrySFX != null)
+            Instantiate(parrySFX, transform.position, Quaternion.identity);
+
+        // Flip direction toward nearest enemy
         GameObject enemy = FindClosestEnemy();
         if (enemy != null)
         {
@@ -74,12 +83,13 @@ public class EnemyProjectile : EnemyAttack
 
     public void HitPlayer(Collider2D other)
     {
-        if(((1 << other.gameObject.layer) & playerLayer) != 0)
+        if (((1 << other.gameObject.layer) & playerLayer) != 0)
         {
             Health playerHealth = other.GetComponent<Health>();
             if (playerHealth != null)
             {
                 playerHealth.Damage(1, gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -92,6 +102,7 @@ public class EnemyProjectile : EnemyAttack
             if (enemyHealth != null)
             {
                 enemyHealth.Damage(3, gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -115,3 +126,4 @@ public class EnemyProjectile : EnemyAttack
         return closest;
     }
 }
+

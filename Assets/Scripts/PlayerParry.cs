@@ -14,6 +14,8 @@ public class PlayerParry : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
 
+    public Animator animator;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -36,6 +38,7 @@ public class PlayerParry : MonoBehaviour
 
     void StartParry()
     {
+        animator.SetBool("IsParrying", true);
         parryField.SetActive(true);
         IsParrying = true;
         parryStartTime = Time.time;
@@ -49,7 +52,7 @@ public class PlayerParry : MonoBehaviour
     void EndParry()
     {
         IsParrying = false;
-
+        animator.SetBool("IsParrying", false);
         if (playerMovement != null)
             playerMovement.enabled = true; // Re-enable movement
         parryField.SetActive(false);

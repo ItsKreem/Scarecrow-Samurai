@@ -1,18 +1,54 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("PlayerAttack")]
+    public GameObject attackHitbox;
+    public float attackHitboxDuration = 0.5f;
+    public float attackCooldown = 1f; // Cooldown time in seconds
+    public KeyCode attackKey = KeyCode.Mouse0;
+
+    [Header("Animator")]
+    public Animator animator;
+
+    private bool canAttack = true;
+
     void Start()
     {
-        
+        if (animator == null)
+            animator = GetComponent<Animator>();
+
+        if (attackHitbox != null)
+            attackHitbox.SetActive(false); // Ensure hitbox starts inactive
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(attackKey) && canAttack)
+        {
+            StartCoroutine(Attack());
+        }
+    }
+
+    IEnumerator Attack()
+    {
+        canAttack = false;
+        animator.SetBool("IsAttacking", true);
+
+        if (attackHitbox != null)
+            attackHitbox.SetActive(true);
+
+        yield return new WaitForSeconds(attackHitboxDuration);
+
+        if (attackHitbox != null)
+            attackHitbox.SetActive(false);
+
+        animator.SetBool("IsAttacking", false);
+
+        yield return new WaitForSeconds(attackCooldown); // Wait for cooldown duration
+        canAttack = true;
     }
 }
+
+
