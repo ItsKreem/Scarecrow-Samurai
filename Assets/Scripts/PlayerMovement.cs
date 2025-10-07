@@ -24,12 +24,15 @@ public class PlayerMovement : MonoBehaviour
     public float screwAttackDuration = 0.4f;
     public GameObject screwAttackHitbox;
 
-    [Header("Dash")]
+    [Header("Dash Settings")]
     public float dashForce = 20f;
+    public float dashPowerMultiplier = 2f;
+    public float dashDuration = 0.25f;
     public float dashCooldown = 1f;
+    public bool allowAirDash = true; // toggle air dash on/off
     private bool canDash = true;
     private bool isDashing = false;
-
+    public GameObject dashHitbox;
 
     public Animator animator;
     private Rigidbody2D rb;
@@ -43,16 +46,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
         moveInput = Input.GetAxis("Horizontal");
 
         CheckGroundStatus();
-        HandleWalk();
-        HandleJump();
+
+        if (!isDashing) // Disable normal movement during dash
+        {
+            HandleWalk();
+            HandleJump();
+        }
+
         HandleScrewAttack();
         HandleDash();
     }
-
-    // ---------------- METHODS ---------------- //
 
     void CheckGroundStatus()
     {
@@ -77,14 +84,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 animator.SetBool("IsJumping", true);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (canDoubleJump)
             {
+                animator.SetBool("IsJumping", true);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJump = false;
-                animator.SetBool("IsJumping", true);
             }
         }
     }
@@ -102,12 +109,12 @@ public class PlayerMovement : MonoBehaviour
         if (moveInput > 0 && !isFacingRight)
         {
             isFacingRight = true;
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(2, 2, 1);
         }
         else if (moveInput < 0 && isFacingRight)
         {
             isFacingRight = false;
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-2, 2, 1);
         }
     }
 
@@ -115,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            Debug.Log("Shift pressed");
+            animator.SetBool("IsDashing", true);
             StartCoroutine(Dash());
         }
     }
@@ -134,15 +141,30 @@ public class PlayerMovement : MonoBehaviour
 
         isScrewAttacking = false;
     }
+
     IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
 
-        float dashDirection = Mathf.Sign(moveInput != 0 ? moveInput : transform.localScale.x);
-        rb.velocity = new Vector2(dashDirection * dashForce, 0f);
+        // Enable dash hitbox
+        if (dashHitbox != null)
+            dashHitbox.SetActive(true);
 
-        yield return new WaitForSeconds(0.2f); // Dash duration
+        Vector2 dashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (dashDirection == Vector2.zero)
+            dashDirection = isFacingRight ? Vector2.right : Vector2.left;
+
+        dashDirection.Normalize();
+        rb.velocity = dashDirection * dashForce * dashPowerMultiplier;
+
+        yield return new WaitForSeconds(dashDuration);
+
+        animator.SetBool("IsDashing", false);
+
+        // Disable dash hitbox after dash ends
+        if (dashHitbox != null)
+            dashHitbox.SetActive(false);
 
         isDashing = false;
 
@@ -150,11 +172,12 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
-
 }
+
 

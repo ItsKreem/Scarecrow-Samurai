@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.29, y: 3.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4822555232341782671}
@@ -140,9 +140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpeed: 2
   waitTimeAtPoint: 1
-  patrolRange: {x: 10, y: 8}
+  patrolRange: {x: 10, y: 10}
   chaseSpeed: 3.5
-  detectionRadius: 10
+  detectionRadius: 14
   stopDistance: 6
   playerLayer:
     serializedVersion: 2
@@ -150,6 +150,11 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8065233017522499873, guid: 877c7a4ea4fd4bf43958bd1ca3f20de6, type: 3}
   shootPoint: {fileID: 3840068218304304607}
   shootInterval: 2
+  groundCheckDistance: 20
+  minHeightAboveGround: 20
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &9100330356271502809
 GameObject:
   m_ObjectHideFlags: 0

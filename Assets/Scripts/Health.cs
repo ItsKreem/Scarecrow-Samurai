@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : GameManager
 {
     public delegate void HitEvent(GameObject source);
     public HitEvent OnHit;
-
+    
     public delegate void ResetEvent();
     public ResetEvent OnHitReset;
 
@@ -92,10 +92,10 @@ public class Health : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("This has been triggereed.");
         if (this.gameObject.CompareTag("Player") == true)
         {
-            Debug.Log("You end here.");
+            Debug.Log("Player has been deaded.");
+            MainMenu();
         }
         Destroy(this.gameObject);
     }

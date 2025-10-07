@@ -19,13 +19,18 @@ public class FlyingEnemyController : MonoBehaviour
     public Transform shootPoint;
     public float shootInterval = 2f;
 
+    [Header("Ground Avoidance")]
+    public float groundCheckDistance = 20f;   
+    public float minHeightAboveGround = 2f;   
+    public LayerMask groundLayer;             
+
     private Transform player;
     private Vector2 spawnPosition;
     private Vector2 patrolTarget;
     private float waitTimer = 0f;
     private float shootTimer = 0f;
     private bool playerDetected = false;
-    private bool isFacingRight = true; // NEW: track enemy facing direction
+    private bool isFacingRight = true; 
 
     void Start()
     {
@@ -39,7 +44,7 @@ public class FlyingEnemyController : MonoBehaviour
 
         if (playerDetected && player != null)
         {
-            FlipTowardsPlayer(); // NEW: flip to face player
+            FlipTowardsPlayer(); 
             ChasePlayer();
             HandleShooting();
         }
@@ -77,16 +82,49 @@ public class FlyingEnemyController : MonoBehaviour
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, patrolTarget, patrolSpeed * Time.deltaTime);
+            Vector2 direction = (patrolTarget - (Vector2)transform.position).normalized;
+            transform.position += (Vector3)(direction * patrolSpeed * Time.deltaTime);
+
+            // Flip visually based on patrol target
+            if (direction.x > 0 && !isFacingRight)
+            {
+                isFacingRight = true;
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (direction.x < 0 && isFacingRight)
+            {
+                isFacingRight = false;
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 
+
     void ChooseNewPatrolTarget()
     {
-        float xOffset = Random.Range(-patrolRange.x, patrolRange.x);
-        float yOffset = Random.Range(-patrolRange.y, patrolRange.y);
-        patrolTarget = spawnPosition + new Vector2(xOffset, yOffset);
+        Vector2 newTarget;
+        do
+        {
+            float xOffset = Random.Range(-patrolRange.x, patrolRange.x);
+            float yOffset = Random.Range(-patrolRange.y, patrolRange.y);
+            newTarget = spawnPosition + new Vector2(xOffset, yOffset);
+
+            RaycastHit2D hit = Physics2D.Raycast(newTarget, Vector2.down, groundCheckDistance, groundLayer);
+            if (hit.collider != null)
+            {
+                float groundY = hit.point.y;
+                if (newTarget.y < groundY + minHeightAboveGround)
+                {
+                    newTarget.y = groundY + minHeightAboveGround;
+                }
+            }
+
+        } while (Vector2.Distance(newTarget, transform.position) < 1f); // avoid too-close patrol points
+
+        patrolTarget = newTarget;
     }
+
+
 
     void ChasePlayer()
     {

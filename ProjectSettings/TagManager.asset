@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Ground
   - Attack
+  - Destructible
+  - Dash
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Enemy
   - Parry
   - Attack
-  - 
-  - 
+  - Destructible
+  - Dash
   - 
   - 
   - 

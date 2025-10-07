@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using System; // for Action
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -27,26 +27,50 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 3f;
 
     [Header("UI")]
-    public TMP_Text roundText;           // Assign in inspector
-    public float roundTextDuration = 2f; // How long the text shows before spawning
+    public TMP_Text roundText;
+    public float roundTextDuration = 2f;
+
+    [Header("LockRoom")]
+    public GameObject LockRoom;
 
     private int currentWaveIndex = 0;
     private List<GameObject> aliveEnemies = new List<GameObject>();
     private bool spawningWave = false;
+    private bool isActive = false; // controlled by CameraRoom
 
-    void Start()
-    {
-        StartCoroutine(SpawnNextWave());
-    }
+    // Event fired when all waves are done
+    public event Action OnAllWavesCompleted;
 
     void Update()
     {
+        if (!isActive) return; // only run logic after CameraRoom tells us to start
+
         aliveEnemies.RemoveAll(e => e == null);
 
         if (aliveEnemies.Count == 0 && !spawningWave && currentWaveIndex < waves.Count)
         {
             StartCoroutine(SpawnNextWave());
         }
+
+        if (currentWaveIndex >= waves.Count && aliveEnemies.Count == 0 && !spawningWave)
+        {
+            Debug.Log("All waves completed!");
+            if (roundText != null)
+                roundText.text = "All waves completed!";
+
+            OnAllWavesCompleted?.Invoke();
+            isActive = false; // stop running
+        }
+    }
+
+    public void BeginSpawning()
+    {
+        LockRoom.SetActive(false);
+        if (isActive) return;
+        isActive = true;
+        currentWaveIndex = 0;
+        aliveEnemies.Clear();
+        StartCoroutine(SpawnNextWave());
     }
 
     IEnumerator SpawnNextWave()
@@ -56,13 +80,10 @@ public class WaveSpawner : MonoBehaviour
 
         if (currentWaveIndex >= waves.Count)
         {
-            Debug.Log("All waves completed!");
-            if (roundText != null)
-                roundText.text = "All waves completed!";
+            spawningWave = false;
             yield break;
         }
 
-        // Show round start text
         if (roundText != null)
         {
             roundText.gameObject.SetActive(true);
@@ -77,7 +98,6 @@ public class WaveSpawner : MonoBehaviour
         Wave wave = waves[currentWaveIndex];
         Debug.Log($"Spawning Wave {currentWaveIndex + 1}");
 
-        // Flying enemies
         List<Transform> flyingShuffled = new List<Transform>(flyingSpawnPoints);
         ShuffleList(flyingShuffled);
 
@@ -89,7 +109,6 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
         }
 
-        // Ground enemies
         List<Transform> groundShuffled = new List<Transform>(groundSpawnPoints);
         ShuffleList(groundShuffled);
 
@@ -109,10 +128,11 @@ public class WaveSpawner : MonoBehaviour
     {
         for (int i = 0; i < list.Count; i++)
         {
-            int randIndex = Random.Range(i, list.Count);
+            int randIndex = UnityEngine.Random.Range(i, list.Count);
             T temp = list[i];
             list[i] = list[randIndex];
             list[randIndex] = temp;
         }
     }
 }
+

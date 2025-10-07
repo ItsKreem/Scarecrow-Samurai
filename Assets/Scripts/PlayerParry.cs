@@ -20,7 +20,7 @@ public class PlayerParry : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        playerMovement = GetComponent<PlayerMovement>(); // Reference to your movement script
+        playerMovement = GetComponent<PlayerMovement>(); 
     }
 
     void Update()
@@ -53,9 +53,9 @@ public class PlayerParry : MonoBehaviour
     {
         IsParrying = false;
         animator.SetBool("IsParrying", false);
+        parryField.SetActive(false);
         if (playerMovement != null)
             playerMovement.enabled = true; // Re-enable movement
-        parryField.SetActive(false);
     }
 }
 
