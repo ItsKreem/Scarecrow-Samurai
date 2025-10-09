@@ -165,12 +165,12 @@ public class FlyingEnemyController : MonoBehaviour
         if (directionToPlayer > 0 && !isFacingRight)
         {
             isFacingRight = true;
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (directionToPlayer < 0 && isFacingRight)
         {
             isFacingRight = false;
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 

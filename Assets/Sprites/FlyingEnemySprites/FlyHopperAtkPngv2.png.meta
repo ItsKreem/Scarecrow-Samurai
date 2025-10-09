@@ -1,0 +1,545 @@
+fileFormatVersion: 2
+guid: 362cd7e33fdb72d4cbc99f916d5cbbb4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_0
+      rect:
+        serializedVersion: 2
+        x: 3913
+        y: 3188
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdd48759ce77af4dbd77154d8951f70
+      internalID: -1609663379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_1
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 3153
+        width: 66
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d06641ca17c6242ad85120ed68d6df
+      internalID: -716394054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_2
+      rect:
+        serializedVersion: 2
+        x: 7901
+        y: 3189
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274c5cc3a931447448787bc1fb22afb4
+      internalID: 208045883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_3
+      rect:
+        serializedVersion: 2
+        x: 7884
+        y: 3176
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49009a457fe6f514dabe38ad7ec6e8b2
+      internalID: -1270855339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_4
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 3142
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc15263f585a2c4a9b96dad661bc6a7
+      internalID: 2050524231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_5
+      rect:
+        serializedVersion: 2
+        x: 7828
+        y: 3138
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e2f49124f585149aa41a8a1bc938f1
+      internalID: -669206710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_6
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1763
+        width: 1790
+        height: 1368
+      alignment: 9
+      pivot: {x: 0.38608044, y: 0.5726197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999b0c8f9f45d6341b457017ad9a3dff
+      internalID: -1737845181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_7
+      rect:
+        serializedVersion: 2
+        x: 7811
+        y: 3125
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972c603fecab3524d981e2904d42c30f
+      internalID: -1846598626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_8
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1763
+        width: 1826
+        height: 1308
+      alignment: 9
+      pivot: {x: 0.38259944, y: 0.603933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b762fa0db2d9f80498686ce57aa8a8bc
+      internalID: -2009816434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_9
+      rect:
+        serializedVersion: 2
+        x: 4662
+        y: 1763
+        width: 1746
+        height: 1307
+      alignment: 9
+      pivot: {x: 0.3862039, y: 0.6080129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8d337a2096c32479efb623e5029b53
+      internalID: 2076797971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_10
+      rect:
+        serializedVersion: 2
+        x: 6550
+        y: 1763
+        width: 1827
+        height: 1234
+      alignment: 9
+      pivot: {x: 0.36549255, y: 0.66101116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16da381cd1b6f3148b5f929082cde94a
+      internalID: 764886080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_11
+      rect:
+        serializedVersion: 2
+        x: 7535
+        y: 2918
+        width: 441
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537935a1e745ad94fabfae137a6442f3
+      internalID: -265294181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_12
+      rect:
+        serializedVersion: 2
+        x: 4311
+        y: 2433
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e7e678e6d05d143871fb12dd670f18
+      internalID: -1606924379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_13
+      rect:
+        serializedVersion: 2
+        x: 4328
+        y: 2332
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cd34222143e964a99cabe4d8f728fb
+      internalID: 972599585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_14
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 1832
+        width: 201
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285d60039eb34574c95e61861b41f4aa
+      internalID: -393070466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_15
+      rect:
+        serializedVersion: 2
+        x: 8396
+        y: 2253
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b2aea2cb6c19f4bb06ec18fdf8f921
+      internalID: 168802854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_16
+      rect:
+        serializedVersion: 2
+        x: 8410
+        y: 2237
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7c5abdf6f110b4496a7918254a98c9
+      internalID: -122918551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_17
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 2082
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e765813da29ef78428b88cb6db470aef
+      internalID: 1842469755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperAtkPngv2_18
+      rect:
+        serializedVersion: 2
+        x: 6522
+        y: 2073
+        width: 27
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16233a4b3166cc04a9d059b4bb5f1513
+      internalID: 790284151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FlyHopperAtkPngv2_0: -1609663379
+      FlyHopperAtkPngv2_1: -716394054
+      FlyHopperAtkPngv2_10: 764886080
+      FlyHopperAtkPngv2_11: -265294181
+      FlyHopperAtkPngv2_12: -1606924379
+      FlyHopperAtkPngv2_13: 972599585
+      FlyHopperAtkPngv2_14: -393070466
+      FlyHopperAtkPngv2_15: 168802854
+      FlyHopperAtkPngv2_16: -122918551
+      FlyHopperAtkPngv2_17: 1842469755
+      FlyHopperAtkPngv2_18: 790284151
+      FlyHopperAtkPngv2_2: 208045883
+      FlyHopperAtkPngv2_3: -1270855339
+      FlyHopperAtkPngv2_4: 2050524231
+      FlyHopperAtkPngv2_5: -669206710
+      FlyHopperAtkPngv2_6: -1737845181
+      FlyHopperAtkPngv2_7: -1846598626
+      FlyHopperAtkPngv2_8: -2009816434
+      FlyHopperAtkPngv2_9: 2076797971
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

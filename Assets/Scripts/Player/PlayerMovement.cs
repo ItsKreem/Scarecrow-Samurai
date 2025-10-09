@@ -122,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            animator.SetBool("IsDashing", true);
             StartCoroutine(Dash());
         }
     }
@@ -150,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
         // Enable dash hitbox
         if (dashHitbox != null)
             dashHitbox.SetActive(true);
+
+        animator.SetBool("IsDashing", true); //ani start
 
         Vector2 dashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (dashDirection == Vector2.zero)

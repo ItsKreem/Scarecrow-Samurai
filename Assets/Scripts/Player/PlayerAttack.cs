@@ -44,10 +44,10 @@ public class PlayerAttack : MonoBehaviour
         if (attackHitbox != null)
             attackHitbox.SetActive(false);
 
+        animator.SetBool("IsAttacking", false);
+
         yield return new WaitForSeconds(attackCooldown); // Wait for cooldown duration
         canAttack = true;
-
-        animator.SetBool("IsAttacking", false);
     }
 }
 
