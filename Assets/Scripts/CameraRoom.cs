@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class CameraRoom : MonoBehaviour
@@ -12,12 +12,15 @@ public class CameraRoom : MonoBehaviour
 
     [Header("Wave Spawner")]
     public GameObject WaveSpawner;
-    public WaveSpawner waveSpawner; 
+    public WaveSpawner waveSpawner;
 
     [Header("Player Settings")]
     public string playerTag = "Player";
 
     private CameraController camController;
+
+    // 👇 Static reference to currently active room
+    public static CameraRoom ActiveRoom { get; private set; }
 
     void Awake()
     {
@@ -44,6 +47,8 @@ public class CameraRoom : MonoBehaviour
     {
         if (!other.CompareTag(playerTag)) return;
 
+        ActiveRoom = this; // 👈 Track this as the current active room
+
         if (camController != null)
             camController.LockCamera(lockPosition.position);
 
@@ -68,6 +73,37 @@ public class CameraRoom : MonoBehaviour
         Debug.Log("CameraRoom: Waves finished. Unlocking camera and deactivating walls.");
     }
 
+    // 👇 NEW: Reset this room after player death
+    public void ResetRoom()
+    {
+        Debug.Log("CameraRoom: Resetting room after player death...");
+
+        if (camController != null)
+            camController.UnlockCamera();
+
+        if (LeftWall != null) LeftWall.SetActive(false);
+        if (RightWall != null) RightWall.SetActive(false);
+
+        if (waveSpawner != null)
+        {
+            waveSpawner.StopAllCoroutines();
+            waveSpawner.ResetRoom(); // you can define this in WaveSpawner if not yet done
+        }
+
+        if (WaveSpawner != null)
+            WaveSpawner.SetActive(false);
+    }
+
+    // 👇 Static helper for Health script
+    public static void UnlockAndReset()
+    {
+        if (ActiveRoom != null)
+        {
+            ActiveRoom.ResetRoom();
+            ActiveRoom = null;
+        }
+    }
+
     private void OnDrawGizmos()
     {
         if (lockPosition != null)
@@ -78,7 +114,3 @@ public class CameraRoom : MonoBehaviour
         }
     }
 }
-
-
-
-

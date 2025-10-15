@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System; // for Action
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -41,10 +42,31 @@ public class WaveSpawner : MonoBehaviour
     // Event fired when all waves are done
     public event Action OnAllWavesCompleted;
 
+    void Awake()
+    {
+        Health.OnPlayerDeath += HandlePlayerDeath;
+    }
+
+    void OnDestroy()
+    {
+        Health.OnPlayerDeath -= HandlePlayerDeath;
+    }
+
+    private void HandlePlayerDeath()
+    {
+        // Only reset if this spawner is active
+        if (isActive)
+        {
+            Debug.Log("WaveSpawner detected player death — resetting room.");
+            ResetRoom();
+        }
+    }
+
     void Update()
     {
-        if (!isActive) return; // only run logic after CameraRoom tells us to start
+        if (!isActive) return;
 
+        // Remove null (dead) enemies
         aliveEnemies.RemoveAll(e => e == null);
 
         if (aliveEnemies.Count == 0 && !spawningWave && currentWaveIndex < waves.Count)
@@ -59,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
                 roundText.text = "All waves completed!";
 
             OnAllWavesCompleted?.Invoke();
-            isActive = false; // stop running
+            isActive = false;
         }
     }
 
@@ -98,6 +120,7 @@ public class WaveSpawner : MonoBehaviour
         Wave wave = waves[currentWaveIndex];
         Debug.Log($"Spawning Wave {currentWaveIndex + 1}");
 
+        // --- Spawn flying enemies ---
         List<Transform> flyingShuffled = new List<Transform>(flyingSpawnPoints);
         ShuffleList(flyingShuffled);
 
@@ -109,6 +132,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
         }
 
+        // --- Spawn ground enemies ---
         List<Transform> groundShuffled = new List<Transform>(groundSpawnPoints);
         ShuffleList(groundShuffled);
 
@@ -134,5 +158,39 @@ public class WaveSpawner : MonoBehaviour
             list[randIndex] = temp;
         }
     }
-}
 
+    public void ResetRoom()
+    {
+        Debug.Log("WaveSpawner: Resetting wave state...");
+
+        // Stop all spawning activity
+        StopAllCoroutines();
+
+        // --- Destroy all alive enemies ---
+        foreach (var enemy in aliveEnemies)
+        {
+            if (enemy != null)
+            {
+                DelayEnemyDeath(5);
+                Destroy(enemy);
+            }
+        }
+
+        // Clear all lists and flags
+        aliveEnemies.Clear();
+        currentWaveIndex = 0;
+        spawningWave = false;
+        isActive = false;
+
+        // Lock the room again
+        if (LockRoom != null)
+            LockRoom.SetActive(true);
+
+        Debug.Log("All enemies destroyed and room reset.");
+    }
+
+    IEnumerator DelayEnemyDeath(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+    }
+}

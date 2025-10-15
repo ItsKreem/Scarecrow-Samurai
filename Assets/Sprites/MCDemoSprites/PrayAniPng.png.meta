@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8bce7d89d195a1469f9ee4c58d2dae9
+guid: 2828c1f7970a4124b88741aac62107b0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,55 +110,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: PrayAniPng_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 0
-        width: 40
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 668
+        y: 1836
+        width: 379
+        height: 672
+      alignment: 9
+      pivot: {x: 0.67000544, y: 0.54794055}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb29d101fe6bf1d42a8b7b82e10c3e0a
-      internalID: 2132534581
+      spriteID: 14f91698ecf47824bab4b694f2a2501f
+      internalID: 1580242867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_1
+      name: PrayAniPng_1
       rect:
         serializedVersion: 2
-        x: 145
-        y: 0
-        width: 43
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1336
+        y: 1836
+        width: 591
+        height: 707
+      alignment: 9
+      pivot: {x: 0.7861834, y: 0.52135974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705e3716f68c3c646b326a7d73745b3f
-      internalID: -137741219
+      spriteID: 60d213446a602ee438a05307ce528aa0
+      internalID: -332495709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: PrayAniPng_2
       rect:
         serializedVersion: 2
-        x: 271
-        y: 0
-        width: 48
-        height: 63
+        x: 1782
+        y: 1101
+        width: 129
+        height: 249
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,104 +166,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7905913574f6a540828c63026afb0c9
-      internalID: -870969196
+      spriteID: f1dbb7ca9e766a04eada0a08cb47236a
+      internalID: 50101200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: PrayAniPng_3
       rect:
         serializedVersion: 2
-        x: 398
-        y: 0
-        width: 47
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2246
+        y: 1847
+        width: 642
+        height: 633
+      alignment: 9
+      pivot: {x: 0.6296337, y: 0.5479406}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c1eaf9df8920c74e9d84b541e66db0f
-      internalID: 1800096716
+      spriteID: f311c6d5d67d5ac4487b26985d963be1
+      internalID: -171469041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_4
+      name: PrayAniPng_4
       rect:
         serializedVersion: 2
-        x: 529
-        y: 0
-        width: 46
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3168
+        y: 1836
+        width: 630
+        height: 681
+      alignment: 9
+      pivot: {x: 0.39346516, y: 0.5433649}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eec8ae7b9abcbd40afa67f4b7050b18
-      internalID: -1979326446
+      spriteID: 4ed2d75a48261c74182273e8724b5872
+      internalID: -1110948934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_5
+      name: PrayAniPng_5
       rect:
         serializedVersion: 2
-        x: 655
-        y: 0
-        width: 43
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4043
+        y: 1827
+        width: 505
+        height: 690
+      alignment: 9
+      pivot: {x: 0.43089032, y: 0.5544717}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4b245409bc7cf4f9f8a1d717bbf7da
-      internalID: 1692471198
+      spriteID: 7f002b50450e1eb49ac16bed4d2a0875
+      internalID: 1493096294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_6
+      name: PrayAniPng_6
       rect:
         serializedVersion: 2
-        x: 782
-        y: 0
-        width: 43
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4793
+        y: 1832
+        width: 423
+        height: 719
+      alignment: 9
+      pivot: {x: 0.5126942, y: 0.5298714}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a12e7e8cf3e59344bbfdb015da444e67
-      internalID: 639693479
+      spriteID: 7d5dd459fe3a5144a8e3a44379f4a613
+      internalID: -378457935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_7
+      name: PrayAniPng_7
       rect:
         serializedVersion: 2
-        x: 910
-        y: 0
-        width: 44
-        height: 63
+        x: 5483
+        y: 1832
+        width: 418
+        height: 685
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c0243e00fd7894695581beef5f36aa
-      internalID: 508894743
+      spriteID: 4bcb6cd55bb8e954ea914470c383d232
+      internalID: -1708042389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PrayAniPng_8
+      rect:
+        serializedVersion: 2
+        x: 6173
+        y: 1832
+        width: 405
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45775f5afcb504b458cd69eef95bc9f6
+      internalID: 701747485
       vertices: []
       indices: 
       edges: []
@@ -288,14 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: 2132534581
-      Walk_1: -137741219
-      Walk_2: -870969196
-      Walk_3: 1800096716
-      Walk_4: -1979326446
-      Walk_5: 1692471198
-      Walk_6: 639693479
-      Walk_7: 508894743
+      PrayAniPng_0: 1580242867
+      PrayAniPng_1: -332495709
+      PrayAniPng_2: 50101200
+      PrayAniPng_3: -171469041
+      PrayAniPng_4: -1110948934
+      PrayAniPng_5: 1493096294
+      PrayAniPng_6: -378457935
+      PrayAniPng_7: -1708042389
+      PrayAniPng_8: 701747485
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,58 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Health : GameManager
 {
     public delegate void HitEvent(GameObject source);
-    public HitEvent OnHit;
-    
+    public event HitEvent OnHit;
+
     public delegate void ResetEvent();
-    public ResetEvent OnHitReset;
+    public event ResetEvent OnHitReset;
 
+    public static event System.Action OnPlayerDeath;
 
+    [Header("Health Settings")]
     public float MaxHealth = 3f;
-    public Cooldown Invulnerability;
-
-    public AudioSource HurtAudio;
-
-    public GameObject hitVFX;
-
-    public float CurrentHealth
-    {
-        get
-        {
-            return _currentHealth;
-        }
-    }
-
-    private float _currentHealth = 3f;
+    private float _currentHealth;
     private bool _canDamage = true;
 
+    [Header("Invulnerability")]
+    public Cooldown Invulnerability;
 
-    // Start is called before the first frame 
+    [Header("Effects & Audio")]
+    public AudioSource HurtAudio;
+    public GameObject hitVFX;
+
+    public float fadeDelay = 0.5f; // Small pause before fade
+
+    public float CurrentHealth => _currentHealth;
+
     void Start()
     {
-        ResetHealthtoMax();
+        ResetHealthToMax();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        ResetInvulnerable();
-    }
-
-    void ResetInvulnerable()
-    {
-        if (_canDamage)
-            return;
-
-        if (Invulnerability.IsOnCooldown && _canDamage == false)
-            return;
-
-        _canDamage = true;
-        OnHitReset?.Invoke();
+        HandleInvulnerability();
     }
 
     public void Damage(float damage, GameObject source)
@@ -62,47 +44,89 @@ public class Health : GameManager
 
         _currentHealth -= damage;
 
-        Debug.Log(source + " has taken " + damage + " damage.");
-
-        // Play hurt audio
         if (HurtAudio != null)
-        {
-            GameObject.Instantiate(HurtAudio, transform.position, Quaternion.identity);
-        }
+            Instantiate(HurtAudio, transform.position, Quaternion.identity);
 
-        // Play hit VFX
         if (hitVFX != null)
-        {
             Instantiate(hitVFX, transform.position, Quaternion.identity);
-        }
 
-        // Death check
         if (_currentHealth <= 0f)
         {
             _currentHealth = 0f;
-            Die();
+            StartCoroutine(HandleDeath());
         }
 
         Invulnerability.StartCooldown();
         _canDamage = false;
-
         OnHit?.Invoke(source);
     }
 
-
-    public void Die()
+    private IEnumerator HandleDeath()
     {
-        if (this.gameObject.CompareTag("Player") == true)
+        if (CompareTag("Player"))
         {
-            Debug.Log("Player has been deaded.");
-            MainMenu();
+            Debug.Log("Player has died.");
+            OnPlayerDeath?.Invoke();
+
+            // Fade to black before respawn
+            if (ScreenFader.Instance != null)
+            {
+                yield return new WaitForSeconds(fadeDelay);
+                yield return ScreenFader.Instance.FadeOut();
+            }
+
+            // Unlock camera and reset room
+            CameraRoom.UnlockAndReset();
+
+            if (SavePoint.HasSavePoint())
+            {
+                yield return StartCoroutine(RespawnPlayer());
+            }
+            else
+            {
+                MainMenu();
+                Destroy(gameObject);
+            }
         }
-        Destroy(this.gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void ResetHealthtoMax()
+    private IEnumerator RespawnPlayer()
+    {
+        yield return new WaitForSeconds(1f);
+
+        ResetHealthToMax();
+        transform.position = SavePoint.GetLastSavePosition();
+
+        Debug.Log($"Player respawned at save point: {SavePoint.GetLastSavePosition()}");
+
+        // Fade back in
+        if (ScreenFader.Instance != null)
+        {
+            yield return ScreenFader.Instance.FadeIn();
+        }
+    }
+
+    private void ResetHealthToMax()
     {
         _currentHealth = MaxHealth;
+        _canDamage = true;
+    }
+
+    private void HandleInvulnerability()
+    {
+        if (_canDamage)
+            return;
+
+        if (Invulnerability.IsOnCooldown)
+            return;
+
+        _canDamage = true;
+        OnHitReset?.Invoke();
     }
 }
+
 

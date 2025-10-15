@@ -19,11 +19,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Double Jump")]
     private bool canDoubleJump;
 
-    [Header("Screw Attack")]
-    public bool isScrewAttacking = false;
-    public float screwAttackDuration = 0.4f;
-    public GameObject screwAttackHitbox;
-
     [Header("Dash Settings")]
     public float dashForce = 20f;
     public float dashPowerMultiplier = 2f;
@@ -57,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
             HandleJump();
         }
 
-        HandleScrewAttack();
         HandleDash();
     }
 
@@ -68,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
         {
             canDoubleJump = true;
             animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", true);
         }
     }
 
@@ -80,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump") && !isScrewAttacking)
+        if (Input.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
@@ -93,14 +91,6 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJump = false;
             }
-        }
-    }
-
-    void HandleScrewAttack()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && !isGrounded && !isScrewAttacking)
-        {
-            StartCoroutine(ScrewAttack());
         }
     }
 
@@ -124,21 +114,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-    }
-
-    IEnumerator ScrewAttack()
-    {
-        isScrewAttacking = true;
-
-        if (screwAttackHitbox != null)
-            screwAttackHitbox.SetActive(true);
-
-        yield return new WaitForSeconds(screwAttackDuration);
-
-        if (screwAttackHitbox != null)
-            screwAttackHitbox.SetActive(false);
-
-        isScrewAttacking = false;
     }
 
     IEnumerator Dash()
