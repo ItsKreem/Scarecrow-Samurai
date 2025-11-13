@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04998845, y: 0}
+  m_Offset: {x: 0.88889885, y: 0.005128145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0999768, y: 1.1582205}
+  m_Size: {x: 2.7777972, y: 1.01389}
   m_EdgeRadius: 0
 --- !u!114 &3071953126603540537
 MonoBehaviour:
@@ -90,12 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 2
+  Damage: 1
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  knockbackForce: 7
-  forceMode: 1
+  knockbackForce: 1
+  forceMode: 0
 --- !u!1 &3781186999947459472
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5494137660766936879}
@@ -181,12 +181,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1311145956, guid: e8b6a3b596a81a042aadb64f3e0b4964, type: 3}
+  m_Sprite: {fileID: 206619322, guid: 7bd7ce9c6609b10499f708f15758b2d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.984375, y: 0.984375}
+  m_Size: {x: 1.2333748, y: 2.1033332}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -224,18 +224,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18373697, y: -0.00000011920929}
+  m_Offset: {x: -0.062859535, y: -0.05001861}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.56091017, y: 0.50381154}
-    oldSize: {x: 1.1134659, y: 1.9766666}
-    newSize: {x: 0.984375, y: 0.984375}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2333748, y: 2.1033332}
+    newSize: {x: 1.2333748, y: 2.1033332}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9007031, y: 1.8892186}
+  m_Size: {x: 1.142458, y: 1.9892555}
   m_EdgeRadius: 0
 --- !u!50 &133613518536635454
 Rigidbody2D:
@@ -249,10 +249,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -276,20 +276,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae9210c902a0c4d99fe283e36aff8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 10
+  moveSpeed: 6
+  jumpForce: 17
+  groundPoundHitbox: {fileID: 6249590320794915284}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 5494137660766936879}
   groundCheckRadius: 0.2
-  isScrewAttacking: 0
-  screwAttackDuration: 0.4
-  screwAttackHitbox: {fileID: 0}
-  dashForce: 5
-  dashPowerMultiplier: 2
-  dashDuration: 0.5
-  dashCooldown: 1
+  dashForce: 12
+  dashPowerMultiplier: 1
+  dashDuration: 1
+  dashCooldown: 2
   allowAirDash: 1
   dashHitbox: {fileID: 8093670468184520993}
   animator: {fileID: 1042677139088491577}
@@ -305,12 +303,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85948182c9e8d8142a7fe344978189a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 3
+  HealthBar: {fileID: 0}
   Invulnerability:
     CurrentProgress: 0
     Duration: 1
   HurtAudio: {fileID: 0}
   hitVFX: {fileID: 6031096299922337755, guid: da9b97663afca534796a812e0f543d16, type: 3}
+  stunDuration: 0.5
+  hurtAnimationName: Player_Hit
+  deathAnimationName: Player_Death
+  fadeDelay: 1
 --- !u!114 &2296074037136389298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parryField: {fileID: 8185308455756836639}
-  parryWindow: 0.4
+  parryWindow: 1
   parryKey: 324
   animator: {fileID: 1042677139088491577}
 --- !u!95 &1042677139088491577
@@ -361,8 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackHitbox: {fileID: 1158622919761897823}
-  attackHitboxDuration: 0.67
-  attackCooldown: 0.5
+  comboResetTime: 0.8
   attackKey: 323
   animator: {fileID: 1042677139088491577}
 --- !u!1 &3883421184866897911
@@ -390,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 3883421184866897911}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.049, z: 0}
+  m_LocalPosition: {x: 0, y: -1.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,7 +408,6 @@ GameObject:
   m_Component:
   - component: {fileID: 280767194750526081}
   - component: {fileID: 2706601796047867754}
-  - component: {fileID: 7021478350707220446}
   m_Layer: 6
   m_Name: StompField
   m_TagString: Player
@@ -461,7 +462,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07725042, y: -0.9105766}
+  m_Offset: {x: -0.03639865, y: -1.1294253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -472,26 +473,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63455474, y: 0.09186745}
+  m_Size: {x: 1.404902, y: 0.52956486}
   m_EdgeRadius: 0
---- !u!114 &7021478350707220446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6249590320794915284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 3
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  knockbackForce: 10
-  forceMode: 1
 --- !u!1 &8093670468184520993
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +539,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3425684, y: 0.004379034}
+  m_Offset: {x: 0.48835182, y: 0.004379034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -567,7 +550,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30139065, y: 2.1297674}
+  m_Size: {x: 0.5929575, y: 2.1297674}
   m_EdgeRadius: 0
 --- !u!1 &8185308455756836639
 GameObject:
@@ -633,7 +616,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20368898, y: -0.015729189}
+  m_Offset: {x: 0.26288646, y: 0.015008628}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -644,5 +627,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87624073, y: 1.8738151}
+  m_Size: {x: 0.9946357, y: 2.1137123}
   m_EdgeRadius: 0

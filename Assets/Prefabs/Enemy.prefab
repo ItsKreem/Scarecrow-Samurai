@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 402140172146844238}
   - component: {fileID: 8579145705302849615}
   - component: {fileID: 3518037401110149222}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: DamageBox
   m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &402140172146844238
 Transform:
   m_ObjectHideFlags: 0
@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 4398498187042823675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.96, y: -0.34, z: 0}
-  m_LocalScale: {x: 3.0167, y: 1.2167, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2244130940502690666}
@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3122161, y: 0.10368225}
+  m_Offset: {x: 2.4919908, y: -0.02389431}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.80898905, y: 0.9684525}
+  m_Size: {x: 1.5460458, y: 2.485939}
   m_EdgeRadius: 0
 --- !u!114 &3518037401110149222
 MonoBehaviour:
@@ -94,7 +94,7 @@ MonoBehaviour:
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  knockbackForce: 20
+  knockbackForce: 5
   forceMode: 1
 --- !u!1 &4832055847042137775
 GameObject:
@@ -106,9 +106,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7752298779311112522}
   - component: {fileID: 2448750572569975293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ParryLight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,7 +212,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.92, y: 0.03, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7752298779311112522}
@@ -234,8 +234,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0.001
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -279,18 +279,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.052348137, y: -0.005655527}
+  m_Offset: {x: -0.012345314, y: 0.017735124}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4375, y: 1.65625}
+    oldSize: {x: 3.3401124, y: 2.78}
     newSize: {x: 2.4375, y: 1.65625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4391003, y: 1.6617217}
+  m_Size: {x: 3.272378, y: 2.8562424}
   m_EdgeRadius: 0
 --- !u!114 &8933900967353964236
 MonoBehaviour:
@@ -304,29 +304,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e218e58d81c3c43b25286edae6093c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 3
-  chaseSpeed: 5
-  patrolZoneSize: {x: 7, y: 1}
-  waitAtPatrolPoint: 0.5
+  patrolSpeed: 2
+  chaseSpeed: 4
+  patrolZoneSize: {x: 20, y: 3}
+  waitAtPatrolPoint: 1
   player: {fileID: 0}
-  detectionRange: 7
-  leapTriggerDistance: 6
+  detectionRange: 8
+  leapTriggerDistance: 10
   waitBeforeLeap: 1
-  leapForce: 5
+  leapForce: 9
   attackHitbox: {fileID: 4398498187042823675}
-  attackHitboxDuration: 1.5
-  parryStunDuration: 2
-  parryKnockbackForce: 3
+  attackHitboxDuration: 1
+  parryStunDuration: 3
+  parryKnockbackForce: 1
   isParried: 0
   leapCooldown:
     CurrentProgress: 0
-    Duration: 1.5
+    Duration: 2
   groundCheck: {fileID: 7101172166450629641}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundRadius: 0.1
   parriedSFX: {fileID: 4665265700734223146, guid: 11afed38d61446249ac07c5119d76eca, type: 3}
+  animator: {fileID: 7332534049576485525}
 --- !u!114 &1763473002547030063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,11 +341,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  HealthBar: {fileID: 0}
   Invulnerability:
-    CurrentProgress: 0
-    Duration: 1
+    CurrentProgress: 3
+    Duration: 0
   HurtAudio: {fileID: 3416484926339989445, guid: d4373d33aea9de845bffb56b5e1afd77, type: 3}
   hitVFX: {fileID: 6031096299922337755, guid: da9b97663afca534796a812e0f543d16, type: 3}
+  stunDuration: 3
+  hurtAnimationName: Enemy_Hurt
+  deathAnimationName: Enemy_Death
+  fadeDelay: 0.5
 --- !u!95 &7332534049576485525
 Animator:
   serializedVersion: 5
@@ -407,7 +413,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5927589077120602373, guid: 0e01be728af161a4da23d8c5c21c682a, type: 3}
+  m_Sprite: {fileID: -1732125269, guid: 05ec04e5bdf00f745ba0dc284a362e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -429,7 +435,7 @@ GameObject:
   - component: {fileID: 7101172166450629641}
   m_Layer: 7
   m_Name: GroundCheck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +449,7 @@ Transform:
   m_GameObject: {fileID: 8162840019469964121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.827, z: 0}
+  m_LocalPosition: {x: 0, y: -1.404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

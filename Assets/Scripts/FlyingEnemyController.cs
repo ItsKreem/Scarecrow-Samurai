@@ -30,12 +30,15 @@ public class FlyingEnemyController : MonoBehaviour
     private float waitTimer = 0f;
     private float shootTimer = 0f;
     private bool playerDetected = false;
-    private bool isFacingRight = true; 
+    private bool isFacingRight = true;
+
+    private Animator anim;
 
     void Start()
     {
         spawnPosition = transform.position;
         ChooseNewPatrolTarget();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -141,6 +144,8 @@ public class FlyingEnemyController : MonoBehaviour
         shootTimer += Time.deltaTime;
         if (shootTimer >= shootInterval)
         {
+            if (anim != null)
+                anim.Play("FlyingEnemy_Shoot");
             ShootProjectile();
             shootTimer = 0f;
         }
@@ -165,12 +170,12 @@ public class FlyingEnemyController : MonoBehaviour
         if (directionToPlayer > 0 && !isFacingRight)
         {
             isFacingRight = true;
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (directionToPlayer < 0 && isFacingRight)
         {
             isFacingRight = false;
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 

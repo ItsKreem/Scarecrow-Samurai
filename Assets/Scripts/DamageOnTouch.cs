@@ -9,7 +9,7 @@ public class DamageOnTouch : MonoBehaviour
     public OnHitSomething OnHit;
 
     [Header("Damage Settings")]
-    public float Damage = 10f;
+    public int Damage = 10;
     public LayerMask TargetLayerMask;
 
     [Header("Knockback Settings")]

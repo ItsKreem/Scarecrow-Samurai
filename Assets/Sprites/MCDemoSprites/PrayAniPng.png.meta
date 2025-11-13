@@ -152,27 +152,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PrayAniPng_2
-      rect:
-        serializedVersion: 2
-        x: 1782
-        y: 1101
-        width: 129
-        height: 249
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1dbb7ca9e766a04eada0a08cb47236a
-      internalID: 50101200
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PrayAniPng_3
       rect:
         serializedVersion: 2
@@ -218,13 +197,13 @@ TextureImporter:
       name: PrayAniPng_5
       rect:
         serializedVersion: 2
-        x: 4043
-        y: 1827
+        x: 4041
+        y: 1825
         width: 505
         height: 690
       alignment: 9
       pivot: {x: 0.43089032, y: 0.5544717}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 4, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -240,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4793
-        y: 1832
+        y: 1836
         width: 423
-        height: 719
+        height: 715
       alignment: 9
       pivot: {x: 0.5126942, y: 0.5298714}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +244,8 @@ TextureImporter:
         width: 418
         height: 685
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 4, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -286,8 +265,8 @@ TextureImporter:
         width: 405
         height: 685
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 5, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

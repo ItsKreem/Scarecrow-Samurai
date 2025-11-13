@@ -118,7 +118,7 @@ TextureImporter:
         width: 504
         height: 580
       alignment: 9
-      pivot: {x: 0.66984195, y: 0.4205301}
+      pivot: {x: 0.6698419, y: 0.4205301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: DashAnimation_1
       rect:
         serializedVersion: 2
-        x: 1323
-        y: 1835
-        width: 774
-        height: 456
+        x: 1325
+        y: 1830
+        width: 773
+        height: 581
       alignment: 9
-      pivot: {x: 0.76202506, y: 0.45668003}
+      pivot: {x: 0.6698419, y: 0.4205301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: DashAnimation_2
       rect:
         serializedVersion: 2
-        x: 2271
-        y: 1834
-        width: 779
-        height: 456
+        x: 2266
+        y: 1830
+        width: 795
+        height: 582
       alignment: 9
-      pivot: {x: 0.75527173, y: 0.448016}
+      pivot: {x: 0.6698419, y: 0.4205301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: DashAnimation_3
       rect:
         serializedVersion: 2
-        x: 3253
-        y: 1832
-        width: 537
-        height: 604
+        x: 3255
+        y: 1840
+        width: 576
+        height: 586
       alignment: 9
-      pivot: {x: 0.58338153, y: 0.43677}
+      pivot: {x: 0.55410933, y: 0.54542685}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -113,12 +113,12 @@ TextureImporter:
       name: AtkAniPng_0
       rect:
         serializedVersion: 2
-        x: 998
-        y: 164
+        x: 994
+        y: 166
         width: 745
         height: 665
       alignment: 9
-      pivot: {x: 0.72414947, y: 0.45297623}
+      pivot: {x: 0.73061067, y: 0.5072639}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: AtkAniPng_1
       rect:
         serializedVersion: 2
-        x: 1985
+        x: 1983
         y: 164
         width: 836
         height: 603
       alignment: 9
-      pivot: {x: 0.3378179, y: 0.47454545}
+      pivot: {x: 0.3459785, y: 0.5808833}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 742
         height: 848
       alignment: 9
-      pivot: {x: 0.32637522, y: 0.3460659}
+      pivot: {x: 0.33610597, y: 0.42269623}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +176,7 @@ TextureImporter:
       name: AtkAniPng_3
       rect:
         serializedVersion: 2
-        x: 3681
+        x: 3672
         y: 162
         width: 673
         height: 779
@@ -202,7 +202,7 @@ TextureImporter:
         width: 1123
         height: 631
       alignment: 9
-      pivot: {x: 0.21960568, y: 0.4586576}
+      pivot: {x: 0.21960568, y: 0.6243823}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

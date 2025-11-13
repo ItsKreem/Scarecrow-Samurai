@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6430101516123130049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043013125859306793}
+  m_Layer: 7
+  m_Name: ShootPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1043013125859306793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430101516123130049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46, y: -2.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3840068218304304607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8055736129265188189
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,10 +63,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.29, y: 3.85, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4822555232341782671}
+  - {fileID: 1043013125859306793}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4308871866451537897
@@ -97,18 +129,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.038169384, y: 0.038168907}
+  m_Offset: {x: 0.0051944256, y: -0.06735122}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.38259944, y: 0.603933}
-    oldSize: {x: 2.6085713, y: 1.8689895}
-    newSize: {x: 6.1466665, y: 4.667711}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.986801, y: 3.0199997}
+    newSize: {x: 3.986801, y: 3.013333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5725355, y: 2.0305634}
+  m_Size: {x: 3.9863105, y: 3.1121457}
   m_EdgeRadius: 0
 --- !u!114 &5221799052751903634
 MonoBehaviour:
@@ -123,11 +155,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  HealthBar: {fileID: 0}
   Invulnerability:
     CurrentProgress: 0
     Duration: 1
   HurtAudio: {fileID: 4066657756458656025, guid: ca00d770997631943868b887de1a7f05, type: 3}
   hitVFX: {fileID: 6031096299922337755, guid: da9b97663afca534796a812e0f543d16, type: 3}
+  stunDuration: 1
+  hurtAnimationName: FlyingEnemy_Hurt
+  deathAnimationName: FlyingEnemy_Death
+  fadeDelay: 0.5
 --- !u!114 &6550106772355240806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,14 +181,14 @@ MonoBehaviour:
   waitTimeAtPoint: 1
   patrolRange: {x: 10, y: 10}
   chaseSpeed: 3.5
-  detectionRadius: 14
-  stopDistance: 6
+  detectionRadius: 100
+  stopDistance: 10
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   projectilePrefab: {fileID: 8065233017522499873, guid: 877c7a4ea4fd4bf43958bd1ca3f20de6, type: 3}
-  shootPoint: {fileID: 3840068218304304607}
-  shootInterval: 2
+  shootPoint: {fileID: 1043013125859306793}
+  shootInterval: 3
   groundCheckDistance: 25
   minHeightAboveGround: 25
   groundLayer:
@@ -219,12 +256,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2009816434, guid: 362cd7e33fdb72d4cbc99f916d5cbbb4, type: 3}
+  m_Sprite: {fileID: -1797472738, guid: deb4f031fea804a41aee6ce42a82cd7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.1466665, y: 4.667711}
+  m_Size: {x: 3.986801, y: 3.013333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

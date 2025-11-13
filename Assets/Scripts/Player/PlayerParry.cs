@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerParry : MonoBehaviour
 {
     public GameObject parryField;
-    public float parryWindow = 0.3f;
+    public float parryWindow = 1f;
     public KeyCode parryKey = KeyCode.LeftShift;
     public bool IsParrying { get; private set; }
 

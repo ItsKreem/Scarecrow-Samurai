@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 707c0bd7ca8bfe74990bce989be29fa0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2773
+        width: 501
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31964416cd7e7484ba63bc8948255894
+      internalID: -671491536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_1
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2773
+        width: 511
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca322a375f336d4395d40e7423b5589
+      internalID: 2070901566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_2
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 2760
+        width: 476
+        height: 446
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23e62ac6de6aac4a91bdb587de06a40
+      internalID: 1303569103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_3
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 2769
+        width: 475
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f40f8b074ba97e438e4c97bf33d9049
+      internalID: 1537223569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_4
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 2773
+        width: 564
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19a8ebc43b11044f9f89eebbd6c3548
+      internalID: 767011040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_5
+      rect:
+        serializedVersion: 2
+        x: 3282
+        y: 2776
+        width: 589
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc473c9314ab44d428952bc413f7f067
+      internalID: -708262258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_6
+      rect:
+        serializedVersion: 2
+        x: 3955
+        y: 2786
+        width: 524
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52779aa2cc4ed64aaa5203af2d5f10e
+      internalID: -353985501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_21
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1409
+        width: 514
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cd6e2d89af0ee46a08eab6946b94c6
+      internalID: 894338431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_22
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1427
+        width: 519
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2987e459067f8246a754a2fff42e8ff
+      internalID: -587079721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_9
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 2138
+        width: 492
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9cea8371833a24db4c43aeb82ba40b
+      internalID: -1605588249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_7
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2157
+        width: 542
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0277dc2a8b87efe4484804afa88914f2
+      internalID: -1743125498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundhopperDeath_animationcolours_8
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2154
+        width: 529
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827a74ff991c4f849ac4d2fce8729902
+      internalID: -421629846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GroundhopperDeath_animationcolours_0: -671491536
+      GroundhopperDeath_animationcolours_1: 2070901566
+      GroundhopperDeath_animationcolours_10: 1250362041
+      GroundhopperDeath_animationcolours_11: -1000867461
+      GroundhopperDeath_animationcolours_12: -314443039
+      GroundhopperDeath_animationcolours_13: 813213077
+      GroundhopperDeath_animationcolours_14: -2134369507
+      GroundhopperDeath_animationcolours_15: 1495320750
+      GroundhopperDeath_animationcolours_16: 170751945
+      GroundhopperDeath_animationcolours_17: 749255231
+      GroundhopperDeath_animationcolours_18: -1674753239
+      GroundhopperDeath_animationcolours_19: 600372594
+      GroundhopperDeath_animationcolours_2: 1303569103
+      GroundhopperDeath_animationcolours_20: -1585631714
+      GroundhopperDeath_animationcolours_21: 894338431
+      GroundhopperDeath_animationcolours_22: -587079721
+      GroundhopperDeath_animationcolours_23: 1632373405
+      GroundhopperDeath_animationcolours_24: 1526649362
+      GroundhopperDeath_animationcolours_25: -550910690
+      GroundhopperDeath_animationcolours_26: 1422436625
+      GroundhopperDeath_animationcolours_27: 953766637
+      GroundhopperDeath_animationcolours_28: -668764263
+      GroundhopperDeath_animationcolours_29: -406093679
+      GroundhopperDeath_animationcolours_3: 1537223569
+      GroundhopperDeath_animationcolours_30: 827706012
+      GroundhopperDeath_animationcolours_31: 175065699
+      GroundhopperDeath_animationcolours_32: 1830354203
+      GroundhopperDeath_animationcolours_33: 1041287433
+      GroundhopperDeath_animationcolours_34: -618522323
+      GroundhopperDeath_animationcolours_35: -781420392
+      GroundhopperDeath_animationcolours_36: -142337474
+      GroundhopperDeath_animationcolours_4: 767011040
+      GroundhopperDeath_animationcolours_5: -708262258
+      GroundhopperDeath_animationcolours_6: -353985501
+      GroundhopperDeath_animationcolours_7: -1743125498
+      GroundhopperDeath_animationcolours_8: -421629846
+      GroundhopperDeath_animationcolours_9: -1605588249
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

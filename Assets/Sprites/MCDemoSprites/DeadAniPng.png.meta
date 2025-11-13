@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 166
-        y: 1834
+        y: 1832
         width: 384
         height: 676
       alignment: 9
@@ -134,12 +134,12 @@ TextureImporter:
       name: DeadAniPng_1
       rect:
         serializedVersion: 2
-        x: 588
-        y: 1834
-        width: 776
-        height: 564
+        x: 572
+        y: 1828
+        width: 818
+        height: 686
       alignment: 9
-      pivot: {x: 0.7468517, y: 0.54187316}
+      pivot: {x: 0.73799026, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: DeadAniPng_2
       rect:
         serializedVersion: 2
-        x: 1387
-        y: 1834
-        width: 797
-        height: 513
+        x: 1396
+        y: 1829
+        width: 782
+        height: 685
       alignment: 9
-      pivot: {x: 0.70413035, y: 0.46930918}
+      pivot: {x: 0.7128672, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: DeadAniPng_3
       rect:
         serializedVersion: 2
-        x: 2179
-        y: 1834
-        width: 685
-        height: 538
+        x: 2187
+        y: 1835
+        width: 672
+        height: 681
       alignment: 9
-      pivot: {x: 0.7604909, y: 0.35367674}
+      pivot: {x: 0.77021646, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: DeadAniPng_4
       rect:
         serializedVersion: 2
-        x: 2882
-        y: 1834
-        width: 685
-        height: 495
+        x: 2872
+        y: 1837
+        width: 693
+        height: 678
       alignment: 9
-      pivot: {x: 0.7566602, y: 0.3674716}
+      pivot: {x: 0.78633994, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: DeadAniPng_5
       rect:
         serializedVersion: 2
-        x: 3558
-        y: 1834
-        width: 686
-        height: 474
+        x: 3565
+        y: 1840
+        width: 671
+        height: 675
       alignment: 9
-      pivot: {x: 0.77541196, y: 0.3892799}
+      pivot: {x: 0.7817783, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: DeadAniPng_6
       rect:
         serializedVersion: 2
-        x: 3917
-        y: 2306
-        width: 11
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4237
+        y: 1839
+        width: 674
+        height: 677
+      alignment: 9
+      pivot: {x: 0.77774656, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: DeadAniPng_7
       rect:
         serializedVersion: 2
-        x: 4235
-        y: 1837
+        x: 4910
+        y: 1839
         width: 684
-        height: 504
+        height: 682
       alignment: 9
-      pivot: {x: 0.7570358, y: 0.37504455}
+      pivot: {x: 0.7627389, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: DeadAniPng_8
       rect:
         serializedVersion: 2
-        x: 4905
-        y: 1834
-        width: 698
-        height: 465
+        x: 5599
+        y: 1840
+        width: 762
+        height: 681
       alignment: 9
-      pivot: {x: 0.744361, y: 0.40406638}
+      pivot: {x: 0.6793395, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: DeadAniPng_9
       rect:
         serializedVersion: 2
-        x: 5597
-        y: 1834
-        width: 724
-        height: 461
+        x: 6372
+        y: 1839
+        width: 782
+        height: 684
       alignment: 9
-      pivot: {x: 0.7029665, y: 0.31216002}
+      pivot: {x: 0.7034803, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,18 +323,18 @@ TextureImporter:
       name: DeadAniPng_10
       rect:
         serializedVersion: 2
-        x: 6671
-        y: 2181
-        width: 83
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7170
+        y: 1841
+        width: 754
+        height: 682
+      alignment: 9
+      pivot: {x: 0.7209667, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 799ea83d831ff6e4abb7703aa98dde5a
+      spriteID: 28753d85db95a994a829e8f494914838
       internalID: -1447305869
       vertices: []
       indices: 
@@ -344,544 +344,19 @@ TextureImporter:
       name: DeadAniPng_11
       rect:
         serializedVersion: 2
-        x: 6796
-        y: 2168
-        width: 36
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7936
+        y: 1843
+        width: 791
+        height: 680
+      alignment: 9
+      pivot: {x: 0.7106313, y: 0.4883546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58b39f6d9038a8446b1d9a781dd03c04
+      spriteID: b2df4ace3593aee4b84937279acf6066
       internalID: -1823940777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_12
-      rect:
-        serializedVersion: 2
-        x: 6837
-        y: 2021
-        width: 148
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49b9428b7bff4a74aaa4005013555198
-      internalID: 836701224
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_13
-      rect:
-        serializedVersion: 2
-        x: 7462
-        y: 2181
-        width: 81
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac5478dca8d5e0b409bcda3585f23bb7
-      internalID: -1790959616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_14
-      rect:
-        serializedVersion: 2
-        x: 7589
-        y: 2168
-        width: 32
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6af97616762d4974792ab9310edc3c74
-      internalID: 107360538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_15
-      rect:
-        serializedVersion: 2
-        x: 8249
-        y: 2181
-        width: 57
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bebc31d323b27da449eeb9b85d27971a
-      internalID: -1352519524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_16
-      rect:
-        serializedVersion: 2
-        x: 8348
-        y: 2168
-        width: 32
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37de59a2463b47f458055ce159f42f27
-      internalID: -69217537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_17
-      rect:
-        serializedVersion: 2
-        x: 6994
-        y: 2129
-        width: 29
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff90427b3c8918f4f9baaaeb5a4bb58d
-      internalID: -768014458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_18
-      rect:
-        serializedVersion: 2
-        x: 7068
-        y: 2136
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 351fc7af24cd217468e1f4647d6494e9
-      internalID: 959311964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_19
-      rect:
-        serializedVersion: 2
-        x: 7630
-        y: 2133
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 228af60e71ddd2440b913aaf5ef575e8
-      internalID: -631292480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_20
-      rect:
-        serializedVersion: 2
-        x: 7861
-        y: 2136
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e086fee0b956cd7419b908511147b617
-      internalID: 2029527657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_21
-      rect:
-        serializedVersion: 2
-        x: 8391
-        y: 2133
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6801b770098c854dbdf35712f873acb
-      internalID: 298440000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_22
-      rect:
-        serializedVersion: 2
-        x: 8620
-        y: 2136
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d5639d416badbb40b387bb7f7e22afb
-      internalID: 1275306466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_23
-      rect:
-        serializedVersion: 2
-        x: 6792
-        y: 2084
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63afbddc4d6134447adc00acdc46e87b
-      internalID: -1866634420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_24
-      rect:
-        serializedVersion: 2
-        x: 7078
-        y: 2086
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f5b4905187328a42b5bc81052d9bf13
-      internalID: 1432867176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_25
-      rect:
-        serializedVersion: 2
-        x: 7179
-        y: 1834
-        width: 724
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bc9f31911ee92b408cb56015616f656
-      internalID: -830388411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_26
-      rect:
-        serializedVersion: 2
-        x: 7938
-        y: 1834
-        width: 741
-        height: 295
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 271425e63c210e540a14d4d8ac6d6b0e
-      internalID: 671028763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_27
-      rect:
-        serializedVersion: 2
-        x: 6750
-        y: 2020
-        width: 30
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba614138f2677cc429139328c6091dd4
-      internalID: -129102330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_28
-      rect:
-        serializedVersion: 2
-        x: 6804
-        y: 2032
-        width: 29
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c2ab9b0ed45beb4aa3e6aedefc4abe0
-      internalID: -1973281222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_29
-      rect:
-        serializedVersion: 2
-        x: 6616
-        y: 2011
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81d49401eda33fc4c90710a010afc66f
-      internalID: -2037506165
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_30
-      rect:
-        serializedVersion: 2
-        x: 6969
-        y: 1980
-        width: 33
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97a1e2fd87ef8434795c8f27dcb8d865
-      internalID: -1551072101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_31
-      rect:
-        serializedVersion: 2
-        x: 6296
-        y: 1903
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 000c8e17aa388cf41b526898c39c51db
-      internalID: -1315166901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_32
-      rect:
-        serializedVersion: 2
-        x: 6386
-        y: 1834
-        width: 724
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1205fdf85dc6ce4ab419366fcd9d492
-      internalID: 183611907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_33
-      rect:
-        serializedVersion: 2
-        x: 7097
-        y: 1881
-        width: 35
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8ddbf1222c72c34c908fa3a1f31c2c0
-      internalID: -261348960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_34
-      rect:
-        serializedVersion: 2
-        x: 7128
-        y: 1851
-        width: 30
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1495dfb2a74b0d24195658258d1e1bd6
-      internalID: 154397002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_35
-      rect:
-        serializedVersion: 2
-        x: 7886
-        y: 1873
-        width: 35
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdb849f3ef342ba43b8c163cba7fe921
-      internalID: 9113837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DeadAniPng_36
-      rect:
-        serializedVersion: 2
-        x: 6330
-        y: 1842
-        width: 42
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb7d2d51cc13da8439384fdcbe6e5b90
-      internalID: 805256924
       vertices: []
       indices: 
       edges: []

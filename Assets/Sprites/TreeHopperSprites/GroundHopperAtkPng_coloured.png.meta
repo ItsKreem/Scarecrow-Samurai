@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 61369df7af9d18a4482a17a931be5bf8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_0
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 2773
+        width: 501
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50bc73ad40be8640a2ea1c39983294e
+      internalID: 504053370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_1
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 2773
+        width: 491
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad6cb0507d2de4448f61abbf07c2ec2
+      internalID: -456164458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_2
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 2772
+        width: 468
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160712c4235c57944b4e3cc0c4ab8f89
+      internalID: 1886754423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_3
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 2773
+        width: 463
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4e06923ad26a04c9a13208ed607765
+      internalID: -937980861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_4
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 2772
+        width: 455
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b69a75b42ce2ae4184904510ba93b6e
+      internalID: -1260457248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_5
+      rect:
+        serializedVersion: 2
+        x: 3224
+        y: 2878
+        width: 503
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8defd3477bc3e444971d13bd3160d2f
+      internalID: 1317548439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_6
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 2996
+        width: 586
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61462b3104690247b5fb01595d672b1
+      internalID: -799838838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_9
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 2949
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c177b3cc6434589419c2bb7d2c927c9b
+      internalID: -1508920747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_28
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2077
+        width: 616
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56afdf19ef80e894caec5b54c705b9dc
+      internalID: -1026916849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundHopperAtkPng_coloured_30
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 2086
+        width: 506
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c132ee47a51004fba39e6b71e738b9
+      internalID: 1730040450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GroundHopperAtkPng_coloured_0: 504053370
+      GroundHopperAtkPng_coloured_1: -456164458
+      GroundHopperAtkPng_coloured_10: -408660550
+      GroundHopperAtkPng_coloured_11: -1932079931
+      GroundHopperAtkPng_coloured_12: 597484233
+      GroundHopperAtkPng_coloured_13: 2011719492
+      GroundHopperAtkPng_coloured_14: -2096487939
+      GroundHopperAtkPng_coloured_15: 1554396575
+      GroundHopperAtkPng_coloured_16: 1347718300
+      GroundHopperAtkPng_coloured_17: 182434859
+      GroundHopperAtkPng_coloured_18: 1297769701
+      GroundHopperAtkPng_coloured_19: -2026698700
+      GroundHopperAtkPng_coloured_2: 1886754423
+      GroundHopperAtkPng_coloured_20: -1414279330
+      GroundHopperAtkPng_coloured_21: -1827204421
+      GroundHopperAtkPng_coloured_22: 1597210442
+      GroundHopperAtkPng_coloured_23: -643104737
+      GroundHopperAtkPng_coloured_24: 797893174
+      GroundHopperAtkPng_coloured_25: 1564159030
+      GroundHopperAtkPng_coloured_26: -203981735
+      GroundHopperAtkPng_coloured_27: 1466875457
+      GroundHopperAtkPng_coloured_28: -1026916849
+      GroundHopperAtkPng_coloured_29: -1152837786
+      GroundHopperAtkPng_coloured_3: -937980861
+      GroundHopperAtkPng_coloured_30: 1730040450
+      GroundHopperAtkPng_coloured_4: -1260457248
+      GroundHopperAtkPng_coloured_5: 1317548439
+      GroundHopperAtkPng_coloured_6: -799838838
+      GroundHopperAtkPng_coloured_7: 1788396261
+      GroundHopperAtkPng_coloured_8: -1566255504
+      GroundHopperAtkPng_coloured_9: -1508920747
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

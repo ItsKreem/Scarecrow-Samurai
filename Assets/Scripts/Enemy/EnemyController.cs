@@ -38,6 +38,9 @@ public class EnemyController : MonoBehaviour
     [Header("SFX")]
     public GameObject parriedSFX;
 
+    [Header("Animation")]
+    public Animator animator;
+
     private Rigidbody2D rb;
     private Vector2 spawnPosition;
     private Vector2 patrolTarget;
@@ -54,7 +57,6 @@ public class EnemyController : MonoBehaviour
         ChooseNewPatrolTarget();
 
         if (player == null) player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        if (attackHitbox != null) attackHitbox.SetActive(false);
         if (leapCooldown == null)
             leapCooldown = new Cooldown { Duration = 3f };
     }
@@ -155,10 +157,15 @@ public class EnemyController : MonoBehaviour
             yield break;
         }
 
+        // Play attack animation once before leaping
+        if (animator != null)
+            animator.Play("Enemy_Attack");
+
         Vector2 leapDir = (player.position - transform.position).normalized;
         leapDir.y = 1f;
         rb.AddForce(leapDir * leapForce, ForceMode2D.Impulse);
 
+        // Turn on hitbox for a set duration
         if (attackHitbox != null)
         {
             attackHitbox.SetActive(true);
@@ -166,8 +173,19 @@ public class EnemyController : MonoBehaviour
             attackHitbox.SetActive(false);
         }
 
+        // Wait until the enemy lands
+        while (!IsGrounded())
+        {
+            if (isParried) { isLeaping = false; yield break; }
+            yield return null;
+        }
+
+        // Stop attack animation when grounded
+        if (animator != null)
+            animator.Play("Enemy_Walk");
+
         leapCooldown.StartCooldown();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         isLeaping = false;
     }
 
@@ -177,6 +195,7 @@ public class EnemyController : MonoBehaviour
 
         if (parriedSFX != null)
         {
+            attackHitbox.SetActive(false);
             Instantiate(parriedSFX, transform.position, Quaternion.identity);
         }
 
@@ -227,5 +246,3 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireCube(Application.isPlaying ? (Vector3)spawnPosition : transform.position, patrolZoneSize);
     }
 }
-
-

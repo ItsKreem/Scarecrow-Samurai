@@ -1,0 +1,629 @@
+fileFormatVersion: 2
+guid: 054a77c27a56621409ff78fd783fcfae
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2948
+        width: 598
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e30275baeb42e941b4570dfab2c172b
+      internalID: -1589997352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_1
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 2941
+        width: 596
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06cb6792edf8e64ca30ac83fa7b3295
+      internalID: 256456563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_2
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2938
+        width: 614
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca162181ccf96548b99190fc4ec9748
+      internalID: 1376663519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_3
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2938
+        width: 537
+        height: 566
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3d85b4a7965ba4da9636a2b06376ce
+      internalID: -1087815605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_4
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 2948
+        width: 608
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40b1b68f26b35141b09d8f31df7160f
+      internalID: -1447482292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1675
+        width: 614
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8eabeda557e304783b906d18cce7f0
+      internalID: -713881600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_58
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 803
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320e6c900f36f854c8799e43354104d5
+      internalID: 1451940168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_5
+      rect:
+        serializedVersion: 2
+        x: 3489
+        y: 2889
+        width: 710
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f985edde0c9549d4d8b5e4617a202aa9
+      internalID: 930327381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_6
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 2885
+        width: 628
+        height: 565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a134d73abbd3e84892d09f7ed4e4e9d
+      internalID: 1804738612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 2339
+        width: 821
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac427bb355472a4384056e26bcf8e11
+      internalID: -2074529330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_8
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 2395
+        width: 785
+        height: 519
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18108e2b33dce04bbdee49b9b25fc4f
+      internalID: 261302403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_9
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 2417
+        width: 767
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989dfbcfa2290954f9ef10fd2490c193
+      internalID: 1560617246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_10
+      rect:
+        serializedVersion: 2
+        x: 2690
+        y: 2445
+        width: 355
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60132db05092ec34bb6e2485e50c2a72
+      internalID: 188233530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1046
+        width: 706
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e83604c2caedc4296f6db7d185965e
+      internalID: 1498156934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_12
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1082
+        width: 675
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462410399b5882b42883719ccaa8d279
+      internalID: -781032349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_13
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1075
+        width: 838
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c7b3455ef6ba84291a0e69f3d573ed
+      internalID: 1296132718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_14
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1082
+        width: 771
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef440f1eb3b27a4683a91d68292c5dd
+      internalID: 35013124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_15
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 1086
+        width: 682
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef075225554668a44bdffc9c34cbe3e0
+      internalID: -733253372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 514
+        width: 600
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bed2a076ac173349a0c1a6ece32b06a
+      internalID: 470546919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_17
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 602
+        width: 266
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4864c7818df2246b7db8446fe3706a
+      internalID: 1824907819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlyHopperDeadPng_withClr_18
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 603
+        width: 192
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2c9d1b2b6789749864daeb11bc0421
+      internalID: -1524709896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FlyHopperDeadPng_withClr_0: -1589997352
+      FlyHopperDeadPng_withClr_1: 256456563
+      FlyHopperDeadPng_withClr_10: 188233530
+      FlyHopperDeadPng_withClr_11: 1498156934
+      FlyHopperDeadPng_withClr_12: -781032349
+      FlyHopperDeadPng_withClr_13: 1296132718
+      FlyHopperDeadPng_withClr_14: 35013124
+      FlyHopperDeadPng_withClr_15: -733253372
+      FlyHopperDeadPng_withClr_16: 470546919
+      FlyHopperDeadPng_withClr_17: 1824907819
+      FlyHopperDeadPng_withClr_18: -1524709896
+      FlyHopperDeadPng_withClr_19: 1322297752
+      FlyHopperDeadPng_withClr_2: 1376663519
+      FlyHopperDeadPng_withClr_20: -849923096
+      FlyHopperDeadPng_withClr_21: 2047584035
+      FlyHopperDeadPng_withClr_22: -1909238444
+      FlyHopperDeadPng_withClr_23: 73409432
+      FlyHopperDeadPng_withClr_24: 1495960786
+      FlyHopperDeadPng_withClr_25: -1290461818
+      FlyHopperDeadPng_withClr_26: -233922954
+      FlyHopperDeadPng_withClr_27: 608406871
+      FlyHopperDeadPng_withClr_28: -592944705
+      FlyHopperDeadPng_withClr_29: -1061876253
+      FlyHopperDeadPng_withClr_3: -1087815605
+      FlyHopperDeadPng_withClr_30: -223053241
+      FlyHopperDeadPng_withClr_31: -827782864
+      FlyHopperDeadPng_withClr_32: -713881600
+      FlyHopperDeadPng_withClr_33: 1836251983
+      FlyHopperDeadPng_withClr_34: 362243021
+      FlyHopperDeadPng_withClr_35: -924265708
+      FlyHopperDeadPng_withClr_36: -245844650
+      FlyHopperDeadPng_withClr_37: -732096133
+      FlyHopperDeadPng_withClr_38: 63473607
+      FlyHopperDeadPng_withClr_39: -859938506
+      FlyHopperDeadPng_withClr_4: -1447482292
+      FlyHopperDeadPng_withClr_40: -1514722808
+      FlyHopperDeadPng_withClr_41: 1734530218
+      FlyHopperDeadPng_withClr_42: -491105301
+      FlyHopperDeadPng_withClr_43: -1636351132
+      FlyHopperDeadPng_withClr_44: 492265085
+      FlyHopperDeadPng_withClr_45: 1481030383
+      FlyHopperDeadPng_withClr_46: 722405017
+      FlyHopperDeadPng_withClr_47: 165002
+      FlyHopperDeadPng_withClr_48: 1821369740
+      FlyHopperDeadPng_withClr_49: -1641742208
+      FlyHopperDeadPng_withClr_5: 930327381
+      FlyHopperDeadPng_withClr_50: -1265902023
+      FlyHopperDeadPng_withClr_51: 1065922713
+      FlyHopperDeadPng_withClr_52: 38920425
+      FlyHopperDeadPng_withClr_53: 1466094761
+      FlyHopperDeadPng_withClr_54: -681202752
+      FlyHopperDeadPng_withClr_55: -1908690413
+      FlyHopperDeadPng_withClr_56: -1263292360
+      FlyHopperDeadPng_withClr_57: -1498717902
+      FlyHopperDeadPng_withClr_58: 1451940168
+      FlyHopperDeadPng_withClr_59: -2128980454
+      FlyHopperDeadPng_withClr_6: 1804738612
+      FlyHopperDeadPng_withClr_60: 614147346
+      FlyHopperDeadPng_withClr_7: -2074529330
+      FlyHopperDeadPng_withClr_8: 261302403
+      FlyHopperDeadPng_withClr_9: 1560617246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

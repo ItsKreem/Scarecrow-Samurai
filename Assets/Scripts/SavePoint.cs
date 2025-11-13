@@ -1,16 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SavePoint : MonoBehaviour
 {
     [Header("Settings")]
     public bool isActivated = false;
+    public float saveAnimationDuration = 2f; // <--- adjustable duration
 
     private static Vector3 lastSavePosition;
     private static bool hasSavePoint = false;
+    public Animator animator;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (collision.CompareTag("Player"))
         {
             ActivateSavePoint(collision.gameObject);
         }
@@ -18,15 +20,32 @@ public class SavePoint : MonoBehaviour
 
     void ActivateSavePoint(GameObject player)
     {
-        // Record position
+        if (isActivated) return; // prevent spamming
+        animator.Play("StatueAnimation");
+        isActivated = true;
         lastSavePosition = transform.position;
         hasSavePoint = true;
-        isActivated = true;
+
+        // Stop player movement & play animation
+        PlayerMovement movement = player.GetComponent<PlayerMovement>();
+        if (movement != null)
+            player.GetComponent<MonoBehaviour>().StartCoroutine(movement.PlaySaveAnimation(saveAnimationDuration));
+
+        // ✅ Reset player health to max
+        Health playerHealth = player.GetComponent<Health>();
+        if (playerHealth != null)
+        {
+            // Make sure it updates the health bar too
+            playerHealth.ResetHealthToMax();
+            if (playerHealth.HealthBar != null)
+                playerHealth.HealthBar.SetHealth(playerHealth.MaxHealth);
+        }
 
         Debug.Log("Save point activated at " + lastSavePosition);
+
+        // You can also add particle effects, sound, etc. here
     }
 
-    // Called by the player's Health script when they die
     public static Vector3 GetLastSavePosition()
     {
         return hasSavePoint ? lastSavePosition : Vector3.zero;
@@ -37,4 +56,3 @@ public class SavePoint : MonoBehaviour
         return hasSavePoint;
     }
 }
-

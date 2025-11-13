@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("PlatformingTest");
     }
 
     public void MainMenu()
