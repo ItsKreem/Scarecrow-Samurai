@@ -95,6 +95,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   knockbackForce: 1
+  upwardBoost: 0.5
   forceMode: 0
 --- !u!1 &3781186999947459472
 GameObject:
@@ -201,7 +202,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3781186999947459472}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc95c199cf164384e9bd8c2d3838c747, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -284,12 +285,17 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 5494137660766936879}
   groundCheckRadius: 0.2
-  dashForce: 12
+  dashForce: 24
   dashPowerMultiplier: 1
-  dashDuration: 1
-  dashCooldown: 2
+  dashDuration: 0.3
   allowAirDash: 1
   dashHitbox: {fileID: 8093670468184520993}
+  stompBounceForce: 15
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  stompCheck: {fileID: 5494137660766936879}
+  stompCheckRadius: 0.25
   animator: {fileID: 1042677139088491577}
 --- !u!114 &5302656978137771621
 MonoBehaviour:
@@ -327,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parryField: {fileID: 8185308455756836639}
-  parryWindow: 1
+  parryWindow: 0.3
   parryKey: 324
   animator: {fileID: 1042677139088491577}
 --- !u!95 &1042677139088491577
@@ -366,6 +372,7 @@ MonoBehaviour:
   attackHitbox: {fileID: 1158622919761897823}
   comboResetTime: 0.8
   attackKey: 323
+  AttackDuration: 0.15
   animator: {fileID: 1042677139088491577}
 --- !u!1 &3883421184866897911
 GameObject:
@@ -408,9 +415,10 @@ GameObject:
   m_Component:
   - component: {fileID: 280767194750526081}
   - component: {fileID: 2706601796047867754}
-  m_Layer: 6
+  - component: {fileID: 7869427096768235838}
+  m_Layer: 9
   m_Name: StompField
-  m_TagString: Player
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +470,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03639865, y: -1.1294253}
+  m_Offset: {x: 0.105861425, y: -0.9806993}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -473,8 +481,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.404902, y: 0.52956486}
+  m_Size: {x: 1.1203818, y: 0.23211288}
   m_EdgeRadius: 0
+--- !u!114 &7869427096768235838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249590320794915284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 5
+  upwardBoost: 0.5
+  forceMode: 1
 --- !u!1 &8093670468184520993
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367282433666073335}
   - component: {fileID: 948799902607875273}
+  - component: {fileID: 3028538537139119900}
   m_Layer: 11
   m_Name: DashField
   m_TagString: Dash
@@ -552,6 +580,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5929575, y: 2.1297674}
   m_EdgeRadius: 0
+--- !u!114 &3028538537139119900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093670468184520993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 0
+  upwardBoost: 0.5
+  forceMode: 1
 --- !u!1 &8185308455756836639
 GameObject:
   m_ObjectHideFlags: 0

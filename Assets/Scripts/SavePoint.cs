@@ -26,10 +26,7 @@ public class SavePoint : MonoBehaviour
         lastSavePosition = transform.position;
         hasSavePoint = true;
 
-        // Stop player movement & play animation
-        PlayerMovement movement = player.GetComponent<PlayerMovement>();
-        if (movement != null)
-            player.GetComponent<MonoBehaviour>().StartCoroutine(movement.PlaySaveAnimation(saveAnimationDuration));
+
 
         // ✅ Reset player health to max
         Health playerHealth = player.GetComponent<Health>();

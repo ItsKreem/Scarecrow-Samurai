@@ -11,7 +11,6 @@ public class PlayerMovement : GameManager
     private bool canMove = true;
     public GameObject groundPoundHitbox;
 
-
     [Header("Ground Check")]
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -30,6 +29,14 @@ public class PlayerMovement : GameManager
     private bool canDash = true;
     private bool isDashing = false;
     public GameObject dashHitbox;
+    private float dashCooldownTimer = 0f;
+
+
+    [Header("Stomp Settings")]
+    public float stompBounceForce = 12f;
+    public LayerMask enemyLayer;
+    public Transform stompCheck;
+    public float stompCheckRadius = 0.25f;
 
     public Animator animator;
     private Rigidbody2D rb;
@@ -43,6 +50,9 @@ public class PlayerMovement : GameManager
 
     void Update()
     {
+        // Update dash cooldown timer
+        if (dashCooldownTimer > 0)
+            dashCooldownTimer -= Time.deltaTime;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -63,19 +73,34 @@ public class PlayerMovement : GameManager
             HandleJump();
         }
 
-        HandleRestart();
         HandleDash();
     }
 
+
+    // ---------------------------------------------------------
+    // GROUND CHECK + DASH RESET
+    // ---------------------------------------------------------
     void CheckGroundStatus()
     {
+        bool wasGrounded = isGrounded;
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         animator.SetBool("IsJumping", !isGrounded);
-        animator.SetBool("IsDoubleJumping", !isGrounded);
-        if (isGrounded) canDoubleJump = true;
-        groundPoundHitbox.SetActive(false);
+
+        if (isGrounded)
+        {
+            canDoubleJump = true;
+
+            // Only refresh dash if cooldown timer has expired
+            if (dashCooldownTimer <= 0f)
+                canDash = true;
+        }
     }
 
+
+    // ---------------------------------------------------------
+    // WALKING
+    // ---------------------------------------------------------
     void HandleWalk()
     {
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
@@ -83,25 +108,63 @@ public class PlayerMovement : GameManager
         FlipPlayer();
     }
 
+    // ---------------------------------------------------------
+    // JUMP + DOUBLE JUMP
+    // ---------------------------------------------------------
     void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
-                animator.SetBool("IsJumping", true);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (canDoubleJump)
             {
+                animator.SetBool("IsDoubleJumping", false);
                 animator.SetBool("IsJumping", false);
+
+                animator.Update(0f);
+
                 animator.SetBool("IsDoubleJumping", true);
+
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 canDoubleJump = false;
             }
+
         }
     }
 
+    // ---------------------------------------------------------
+    // STOMP ON ENEMY HEAD
+    // ---------------------------------------------------------
+    //void CheckStompEnemy()
+    //{
+    //    Collider2D enemy = Physics2D.OverlapCircle(stompCheck.position, stompCheckRadius, enemyLayer);
+
+    //    if (enemy != null && rb.velocity.y <= 0)
+    //    {
+    //        Health enemyHealth = enemy.GetComponent<Health>();
+    //        if (enemyHealth != null)
+    //            enemyHealth.Damage(1, gameObject);
+
+    //        rb.velocity = new Vector2(rb.velocity.x, stompBounceForce);
+
+    //        // Refresh double jump
+    //        canDoubleJump = true;
+
+    //        animator.SetBool("IsDoubleJumping", false);
+    //        animator.SetBool("IsJumping", false);
+    //        animator.Update(0f);
+
+    //        animator.SetBool("IsDoubleJumping", true);
+    //    }
+    //}
+
+
+    // ---------------------------------------------------------
+    // MOVEMENT FLIP
+    // ---------------------------------------------------------
     void FlipPlayer()
     {
         if (moveInput > 0 && !isFacingRight)
@@ -116,25 +179,24 @@ public class PlayerMovement : GameManager
         }
     }
 
+    // ---------------------------------------------------------
+    // DASH 
+    // ---------------------------------------------------------
     void HandleDash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && (isGrounded || allowAirDash))
         {
             StartCoroutine(Dash());
         }
     }
 
-    void HandleRestart()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            MainMenu();
-        }
-    }
     IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
+
+        // Start cooldown
+        dashCooldownTimer = dashCooldown;
 
         if (dashHitbox != null)
             dashHitbox.SetActive(true);
@@ -142,90 +204,35 @@ public class PlayerMovement : GameManager
         animator.SetBool("IsDashing", true);
 
         float originalGravity = rb.gravityScale;
-        Vector2 inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        rb.gravityScale = 0;
 
-        // Detect if player is pressing down (even diagonally)
-        bool isGroundPound = inputDir.y < -0.2f;
+        Vector2 dashDirection =
+            Input.GetAxisRaw("Horizontal") != 0 ?
+            new Vector2(Input.GetAxisRaw("Horizontal"), 0) :
+            (isFacingRight ? Vector2.right : Vector2.left);
 
-        if (isGroundPound)
-        {
-            // Force ground pound straight down
-            rb.gravityScale = 0f;
-            rb.velocity = Vector2.zero;
-
-            // Apply downward impulse
-            rb.AddForce(Vector2.down * dashForce * dashPowerMultiplier, ForceMode2D.Impulse);
-
-            // Activate ground pound hitbox
-            if (groundPoundHitbox != null)
-                groundPoundHitbox.SetActive(true);
-        }
-        else
-        {
-            // Disable gravity during normal dash
-            rb.gravityScale = 0f;
-
-            Vector2 dashDirection = inputDir;
-            if (dashDirection == Vector2.zero)
-                dashDirection = isFacingRight ? Vector2.right : Vector2.left;
-
-            dashDirection.Normalize();
-            rb.velocity = dashDirection * dashForce * dashPowerMultiplier;
-        }
+        rb.velocity = dashDirection.normalized * dashForce * dashPowerMultiplier;
 
         yield return new WaitForSeconds(dashDuration);
-
-        animator.SetBool("IsDashing", false);
 
         if (dashHitbox != null)
             dashHitbox.SetActive(false);
 
-        // Restore gravity
         rb.gravityScale = originalGravity;
+        animator.SetBool("IsDashing", false);
         isDashing = false;
-
-        // Turn off ground pound hitbox after dash ends
-        if (groundPoundHitbox != null)
-            groundPoundHitbox.SetActive(false);
-
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
     }
 
-// --- Save Point Animation ---
-public IEnumerator PlaySaveAnimation(float duration)
-    {
-        canMove = false;
-        animator.SetTrigger("IsPraying");
-        rb.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(duration);
-        animator.SetTrigger("NotPraying");
-
-        canMove = true;
-    }
-
-    // --- Death Animation ---
-    public IEnumerator PlayDeathAnimation()
-    {
-        canMove = false;
-        rb.velocity = Vector2.zero;
-        animator.SetTrigger("Die"); 
-
-        yield return new WaitForSeconds(1);
-    }
-
-    // --- Respawn Animation ---
-    public IEnumerator PlayRespawnAnimation()
-    {
-        animator.SetTrigger("NotPraying"); 
-        yield return new WaitForSeconds(1);
-        canMove = true;
-    }
-
+    // ---------------------------------------------------------
+    // GIZMOS
+    // ---------------------------------------------------------
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+
+        if (stompCheck != null)
+            Gizmos.DrawWireSphere(stompCheck.position, stompCheckRadius);
     }
 }

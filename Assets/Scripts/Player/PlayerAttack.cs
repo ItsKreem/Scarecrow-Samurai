@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject attackHitbox;
     public float comboResetTime = 1f; // Time before combo resets
     public KeyCode attackKey = KeyCode.Mouse0;
+    public float AttackDuration = 0.15f;
 
     [Header("Animator")]
     public Animator animator;
@@ -16,6 +17,12 @@ public class PlayerAttack : MonoBehaviour
     private bool queuedNext = false;
     private float lastAttackTime = 0f;
 
+    [Header("Movement Speed")]
+    private PlayerMovement playerMovement;
+    private float originalMoveSpeed;
+    public float attackSpeedMultiplier = 0.5f; // halves movement speed
+
+
     void Start()
     {
         if (animator == null)
@@ -23,16 +30,24 @@ public class PlayerAttack : MonoBehaviour
 
         if (attackHitbox != null)
             attackHitbox.SetActive(false);
+
+        // Get movement script
+        playerMovement = GetComponent<PlayerMovement>();
+        if (playerMovement != null)
+            originalMoveSpeed = playerMovement.moveSpeed;
     }
+
 
     void Update()
     {
+        // avoid hard coding. Make use of the Input or Make use of the new Input System
+
         if (Input.GetKeyDown(attackKey))
         {
             // Start first attack if idle
             if (!isAttacking)
             {
-                comboStep = 1;
+                comboStep++;
                 StartCoroutine(AttackRoutine());
             }
             // Queue next combo step if allowed
@@ -40,6 +55,12 @@ public class PlayerAttack : MonoBehaviour
             {
                 queuedNext = true;
             }
+        }
+
+        if (comboStep > 3)
+        {
+            DisableHitbox();
+            comboStep = 0;
         }
 
         // Reset combo if idle too long
@@ -55,40 +76,33 @@ public class PlayerAttack : MonoBehaviour
         queuedNext = false;
         lastAttackTime = Time.time;
 
-        // Trigger the current combo attack animation
+        // Halve player movement speed
+        if (playerMovement != null)
+            playerMovement.moveSpeed = originalMoveSpeed * attackSpeedMultiplier;
+
         animator.ResetTrigger("Attack1");
         animator.ResetTrigger("Attack2");
         animator.ResetTrigger("Attack3");
         animator.SetTrigger("Attack" + comboStep);
 
-        // --- Wait until current animation nears end ---
-        float attackDuration = GetAnimationClipLength("Attack" + comboStep);
-        float comboWindow = attackDuration * 0.6f; // when next input can be queued
+        EnableHitbox();
 
-        yield return new WaitForSeconds(comboWindow);
-
-        // Wait to see if player pressed again during combo window
-        float remaining = attackDuration - comboWindow;
         float t = 0f;
-        while (t < remaining)
+        while (t < AttackDuration)
         {
-            if (queuedNext && comboStep < 3)
-            {
-                comboStep++;
-                queuedNext = false;
-                // Start next attack
-                StartCoroutine(AttackRoutine());
-                yield break;
-            }
             t += Time.deltaTime;
             yield return null;
         }
 
-        // Attack finished, reset states
+        DisableHitbox();
+
+        // Restore speed after attack ends
+        if (playerMovement != null)
+            playerMovement.moveSpeed = originalMoveSpeed;
+
         isAttacking = false;
-        queuedNext = false;
-        comboStep = 0;
     }
+
 
     // Helper to get the length of an animation clip by name
     private float GetAnimationClipLength(string clipName)
@@ -115,7 +129,5 @@ public class PlayerAttack : MonoBehaviour
             attackHitbox.SetActive(false);
     }
 }
-
-
 
 

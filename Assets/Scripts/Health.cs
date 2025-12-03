@@ -105,9 +105,6 @@ public class Health : GameManager
             if (animator != null && !string.IsNullOrEmpty(deathAnimationName))
                 animator.Play(deathAnimationName);
 
-            // Play player-specific death animation coroutine if available
-            if (playerMovement != null)
-                yield return playerMovement.StartCoroutine(playerMovement.PlayDeathAnimation());
 
             // Fade out
             if (ScreenFader.Instance != null)
@@ -138,7 +135,7 @@ public class Health : GameManager
             // Enemy death animation
             if (animator != null && !string.IsNullOrEmpty(deathAnimationName))
             {
-                animator.SetTrigger("Death");
+                animator.SetBool("Dead", true);
                 animator.Play(deathAnimationName);
                 // Wait for animation length before destroying
                 yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
@@ -179,9 +176,6 @@ public class Health : GameManager
         yield return new WaitForSeconds(1f);
 
         ResetHealthToMax();
-
-        if (playerMovement != null)
-            yield return playerMovement.StartCoroutine(playerMovement.PlayRespawnAnimation());
 
         transform.position = SavePoint.GetLastSavePosition();
         Debug.Log($"Player respawned at save point: {SavePoint.GetLastSavePosition()}");

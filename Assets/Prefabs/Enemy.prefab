@@ -343,11 +343,11 @@ MonoBehaviour:
   MaxHealth: 3
   HealthBar: {fileID: 0}
   Invulnerability:
-    CurrentProgress: 3
+    CurrentProgress: 0
     Duration: 0
   HurtAudio: {fileID: 3416484926339989445, guid: d4373d33aea9de845bffb56b5e1afd77, type: 3}
   hitVFX: {fileID: 6031096299922337755, guid: da9b97663afca534796a812e0f543d16, type: 3}
-  stunDuration: 3
+  stunDuration: 1
   hurtAnimationName: Enemy_Hurt
   deathAnimationName: Enemy_Death
   fadeDelay: 0.5
