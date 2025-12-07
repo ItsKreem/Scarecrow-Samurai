@@ -55,15 +55,22 @@ public class Health : GameManager
 
     public void Damage(int damage, GameObject source)
     {
+        // ---------------------------------------------
+        // PREVENT DAMAGE IF PLAYER IS DASHING
+        // ---------------------------------------------
+        if (playerMovement != null && playerMovement.IsDashing)
+            return;
+
         if (!_canDamage)
             return;
 
         _currentHealth -= damage;
-        
+
         if (CompareTag("Player"))
         {
             HealthBar.SetHealth(_currentHealth);
         }
+
         // Apply stun if still alive
         if (_currentHealth > 0)
             StartCoroutine(HandleStun());
@@ -93,6 +100,7 @@ public class Health : GameManager
         _canDamage = false;
         OnHit?.Invoke(source);
     }
+
 
     private IEnumerator HandleDeath()
     {

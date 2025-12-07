@@ -30,7 +30,7 @@ public class PlayerMovement : GameManager
     private bool isDashing = false;
     public GameObject dashHitbox;
     private float dashCooldownTimer = 0f;
-
+    public bool IsDashing => isDashing;
 
     [Header("Stomp Settings")]
     public float stompBounceForce = 12f;
@@ -50,7 +50,6 @@ public class PlayerMovement : GameManager
 
     void Update()
     {
-        // Update dash cooldown timer
         if (dashCooldownTimer > 0)
             dashCooldownTimer -= Time.deltaTime;
 
@@ -223,10 +222,6 @@ public class PlayerMovement : GameManager
         isDashing = false;
     }
 
-
-    // ---------------------------------------------------------
-    // GIZMOS
-    // ---------------------------------------------------------
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)

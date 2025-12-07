@@ -1,23 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyController : MonoBehaviour
 {
     [Header("Movement")]
-    public float patrolSpeed = 2f;
-    public float chaseSpeed = 4f;
-    public Vector2 patrolZoneSize = new Vector2(5f, 3f);
-    public float waitAtPatrolPoint = 2f;
+    public float moveSpeed = 3f;
 
     [Header("Detection")]
     public Transform player;
-    public float detectionRange = 5f;
-    public float leapTriggerDistance = 3f;
-    public float waitBeforeLeap = 1f;
 
     [Header("Leap Attack")]
+    public float leapTriggerDistance = 3f;
+    public float waitBeforeLeap = 1f;
     public float leapForce = 12f;
     public GameObject attackHitbox;
     public float attackHitboxDuration = 0.5f;
@@ -42,100 +37,74 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
 
     private Rigidbody2D rb;
-    private Vector2 spawnPosition;
-    private Vector2 patrolTarget;
-    private bool chasing = false;
     private bool isLeaping = false;
-    private bool waitingAtPatrolPoint = false;
-    private float waitTimer = 0f;
-    private bool isFacingRight = true; // NEW: track enemy facing direction
+    private bool isFacingRight = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spawnPosition = transform.position;
-        ChooseNewPatrolTarget();
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-        if (player == null) player = GameObject.FindGameObjectWithTag("Player")?.transform;
         if (leapCooldown == null)
             leapCooldown = new Cooldown { Duration = 3f };
     }
 
     void Update()
     {
-        if (isParried || player == null) return;
-
-        float distToPlayer = Vector2.Distance(transform.position, player.position);
-        chasing = distToPlayer <= detectionRange;
+        if (player == null || isParried) return;
 
         FlipTowardsPlayer();
 
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // Try leaping if in range
         if (!isLeaping && !leapCooldown.IsOnCooldown && distToPlayer <= leapTriggerDistance && IsGrounded())
         {
             StartCoroutine(LeapTowardPlayer());
+            return;
         }
-        else if (!isLeaping)
+
+        if (!isLeaping)
+            MoveTowardPlayerLogic();
+    }
+
+    // ------------------------------
+    //     NEW PLAYER-TRACKING LOGIC
+    // ------------------------------
+    void MoveTowardPlayerLogic()
+    {
+        Vector2 pos = transform.position;
+        Vector2 targetPos = player.position;
+
+        // If player is ABOVE, enemy moves directly underneath player
+        if (player.position.y > transform.position.y + 0.2f)
         {
-            if (chasing)
-                ChasePlayer();
-            else
-                Patrol();
+            float directionX = Mathf.Sign(targetPos.x - pos.x);
+            rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
+        }
+        else
+        {
+            // Standard chase movement
+            float directionX = Mathf.Sign(targetPos.x - pos.x);
+            rb.velocity = new Vector2(directionX * moveSpeed, rb.velocity.y);
         }
     }
 
     void FlipTowardsPlayer()
     {
-        if (player == null) return;
+        float dir = player.position.x - transform.position.x;
 
-        float directionToPlayer = player.position.x - transform.position.x;
-
-        if (directionToPlayer > 0 && !isFacingRight)
+        if (dir > 0 && !isFacingRight)
         {
             isFacingRight = true;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-        else if (directionToPlayer < 0 && isFacingRight)
+        else if (dir < 0 && isFacingRight)
         {
             isFacingRight = false;
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-    }
-
-    void Patrol()
-    {
-        if (waitingAtPatrolPoint)
-        {
-            waitTimer += Time.deltaTime;
-            if (waitTimer >= waitAtPatrolPoint)
-            {
-                ChooseNewPatrolTarget();
-                waitingAtPatrolPoint = false;
-            }
-            return;
-        }
-
-        Vector2 direction = (patrolTarget - (Vector2)transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * patrolSpeed, rb.velocity.y);
-
-        if (Vector2.Distance(transform.position, patrolTarget) < 0.2f)
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-            waitingAtPatrolPoint = true;
-            waitTimer = 0f;
-        }
-    }
-
-    void ChooseNewPatrolTarget()
-    {
-        float x = Random.Range(-patrolZoneSize.x / 2f, patrolZoneSize.x / 2f);
-        float y = Random.Range(-patrolZoneSize.y / 2f, patrolZoneSize.y / 2f);
-        patrolTarget = spawnPosition + new Vector2(x, y);
-    }
-
-    void ChasePlayer()
-    {
-        Vector2 direction = player.position - transform.position;
-        rb.velocity = new Vector2(Mathf.Sign(direction.x) * chaseSpeed, rb.velocity.y);
     }
 
     IEnumerator LeapTowardPlayer()
@@ -143,29 +112,24 @@ public class EnemyController : MonoBehaviour
         isLeaping = true;
         rb.velocity = new Vector2(0f, rb.velocity.y);
 
-        float timer = 0f;
-        while (timer < waitBeforeLeap)
+        float t = 0f;
+        while (t < waitBeforeLeap)
         {
             if (isParried) { isLeaping = false; yield break; }
-            timer += Time.deltaTime;
+            t += Time.deltaTime;
             yield return null;
         }
 
-        if (!IsGrounded())
-        {
-            isLeaping = false;
-            yield break;
-        }
+        if (!IsGrounded()) { isLeaping = false; yield break; }
 
-        // Play attack animation once before leaping
         if (animator != null)
             animator.Play("Enemy_Attack");
 
         Vector2 leapDir = (player.position - transform.position).normalized;
         leapDir.y = 1f;
+
         rb.AddForce(leapDir * leapForce, ForceMode2D.Impulse);
 
-        // Turn on hitbox for a set duration
         if (attackHitbox != null)
         {
             attackHitbox.SetActive(true);
@@ -173,48 +137,52 @@ public class EnemyController : MonoBehaviour
             attackHitbox.SetActive(false);
         }
 
-        // Wait until the enemy lands
         while (!IsGrounded())
         {
             if (isParried) { isLeaping = false; yield break; }
             yield return null;
         }
 
-        // Stop attack animation when grounded
         if (animator != null)
             animator.Play("Enemy_Walk");
 
         leapCooldown.StartCooldown();
         yield return new WaitForSeconds(2f);
+
         isLeaping = false;
     }
 
     public void OnParried(Vector2 knockbackDir, float customKnockbackForce = -1f)
     {
-        if (isParried) return;
 
         if (parriedSFX != null)
-        {
-            attackHitbox.SetActive(false);
             Instantiate(parriedSFX, transform.position, Quaternion.identity);
-        }
 
         StopAllCoroutines();
         isLeaping = false;
 
         rb.velocity = Vector2.zero;
-        float knockback = customKnockbackForce >= 0f ? customKnockbackForce : parryKnockbackForce;
-        rb.AddForce(knockbackDir.normalized * knockback, ForceMode2D.Impulse);
-        if (attackHitbox != null) attackHitbox.SetActive(false);
+
+        float knock = customKnockbackForce >= 0 ? customKnockbackForce : parryKnockbackForce;
+        rb.AddForce(knockbackDir.normalized * knock, ForceMode2D.Impulse);
+
+        if (attackHitbox != null)
+            attackHitbox.SetActive(false);
 
         isParried = true;
+
         StartCoroutine(RecoverFromParry());
     }
 
-
     IEnumerator RecoverFromParry()
     {
-        yield return new WaitForSeconds(parryStunDuration);
+        float t = 0f;
+        while (t < parryStunDuration)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            t += Time.deltaTime;
+            yield return null;
+        }
         isParried = false;
     }
 
@@ -228,21 +196,8 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.CompareTag("Parry"))
         {
-            Vector2 knockbackDir = (transform.position - player.position).normalized;
-            OnParried(knockbackDir);
+            Vector2 knockDir = (transform.position - player.position).normalized;
+            OnParried(knockDir);
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
-        }
-
-        // Show patrol zone
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(Application.isPlaying ? (Vector3)spawnPosition : transform.position, patrolZoneSize);
     }
 }

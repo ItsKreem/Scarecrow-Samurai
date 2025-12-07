@@ -12,23 +12,17 @@ public class DamageOnTouch : MonoBehaviour
     public ForceMode2D forceMode = ForceMode2D.Impulse;
 
     [Header("Parry State")]
-    public bool IsParried = false;   // Set true when the parry field hits us
+    public bool IsParried = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // --- PARRY CHECK ---------------------------------------------
-        PlayerParry parry = other.GetComponentInParent<PlayerParry>();
-        if (parry != null && parry.IsParrying && other.gameObject == parry.parryField)
+        if (other.CompareTag("Parry"))
         {
-            // Enemy attack was parried
+            Debug.Log("Enemy attack was parried.");
             IsParried = true;
             return;
         }
-        // --------------------------------------------------------------
-
-        // Ignore if attack was parried
-        if (IsParried)
-            return;
 
         // Check if target can be damaged
         if (!((TargetLayerMask.value & (1 << other.gameObject.layer)) > 0))
@@ -44,6 +38,7 @@ public class DamageOnTouch : MonoBehaviour
     private void DealDamage(Health targetHealth, Collider2D other)
     {
         targetHealth.Damage(Damage, gameObject);
+        Debug.Log("Dealing " + Damage + " damage to " + other.name + ".");
         ApplyKnockback(other);
     }
 

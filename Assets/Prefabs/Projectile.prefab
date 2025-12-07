@@ -97,9 +97,10 @@ GameObject:
   - component: {fileID: 9087385862944582017}
   - component: {fileID: 4027060697334114102}
   - component: {fileID: -1687464684972206598}
+  - component: {fileID: -1565446272747482036}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,3 +275,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1565446272747482036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065233017522499873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  knockbackForce: 5
+  upwardBoost: 7
+  forceMode: 1
+  IsParried: 0

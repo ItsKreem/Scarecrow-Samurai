@@ -94,9 +94,10 @@ MonoBehaviour:
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  knockbackForce: 1
-  upwardBoost: 0.5
+  knockbackForce: 3
+  upwardBoost: 0
   forceMode: 0
+  IsParried: 0
 --- !u!1 &3781186999947459472
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +254,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -277,8 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae9210c902a0c4d99fe283e36aff8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  jumpForce: 17
+  moveSpeed: 8
+  jumpForce: 35
   groundPoundHitbox: {fileID: 6249590320794915284}
   groundLayer:
     serializedVersion: 2
@@ -288,6 +289,7 @@ MonoBehaviour:
   dashForce: 24
   dashPowerMultiplier: 1
   dashDuration: 0.3
+  dashCooldown: 0.5
   allowAirDash: 1
   dashHitbox: {fileID: 8093670468184520993}
   stompBounceForce: 15
@@ -309,14 +311,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85948182c9e8d8142a7fe344978189a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 3
+  MaxHealth: 5
   HealthBar: {fileID: 0}
   Invulnerability:
     CurrentProgress: 0
     Duration: 1
   HurtAudio: {fileID: 0}
   hitVFX: {fileID: 6031096299922337755, guid: da9b97663afca534796a812e0f543d16, type: 3}
-  stunDuration: 0.5
+  stunDuration: 0.8
   hurtAnimationName: Player_Hit
   deathAnimationName: Player_Death
   fadeDelay: 1
@@ -334,6 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parryField: {fileID: 8185308455756836639}
   parryWindow: 0.3
+  parryCooldown: 0.5
   parryKey: 324
   animator: {fileID: 1042677139088491577}
 --- !u!95 &1042677139088491577
@@ -372,8 +375,9 @@ MonoBehaviour:
   attackHitbox: {fileID: 1158622919761897823}
   comboResetTime: 0.8
   attackKey: 323
-  AttackDuration: 0.15
+  AttackDuration: 0.3
   animator: {fileID: 1042677139088491577}
+  attackSpeedMultiplier: 0.25
 --- !u!1 &3883421184866897911
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +420,7 @@ GameObject:
   - component: {fileID: 280767194750526081}
   - component: {fileID: 2706601796047867754}
   - component: {fileID: 7869427096768235838}
+  - component: {fileID: 2524894433870447384}
   m_Layer: 9
   m_Name: StompField
   m_TagString: Attack
@@ -502,6 +507,27 @@ MonoBehaviour:
   knockbackForce: 5
   upwardBoost: 0.5
   forceMode: 1
+  IsParried: 0
+--- !u!114 &2524894433870447384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249590320794915284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 5
+  upwardBoost: 0.5
+  forceMode: 1
+  IsParried: 0
 --- !u!1 &8093670468184520993
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +539,7 @@ GameObject:
   - component: {fileID: 367282433666073335}
   - component: {fileID: 948799902607875273}
   - component: {fileID: 3028538537139119900}
+  - component: {fileID: 8582665718404882922}
   m_Layer: 11
   m_Name: DashField
   m_TagString: Dash
@@ -599,6 +626,27 @@ MonoBehaviour:
   knockbackForce: 0
   upwardBoost: 0.5
   forceMode: 1
+  IsParried: 0
+--- !u!114 &8582665718404882922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093670468184520993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d9adafe7341049a3b25bba44c4283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 0
+  upwardBoost: 0.5
+  forceMode: 1
+  IsParried: 0
 --- !u!1 &8185308455756836639
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +711,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26288646, y: 0.015008628}
+  m_Offset: {x: 0.18806124, y: -0.044082165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -674,5 +722,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9946357, y: 2.1137123}
+  m_Size: {x: 1.6891394, y: 2.231894}
   m_EdgeRadius: 0
