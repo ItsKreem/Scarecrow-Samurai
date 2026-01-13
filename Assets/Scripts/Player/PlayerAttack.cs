@@ -22,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
     private float originalMoveSpeed;
     public float attackSpeedMultiplier = 0.5f; // halves movement speed
 
+    [Header("Sound")]
+    public int whooshStep = 0;
 
     void Start()
     {
@@ -40,6 +42,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+
         // avoid hard coding. Make use of the Input or Make use of the new Input System
 
         if (Input.GetKeyDown(attackKey))
@@ -48,6 +51,7 @@ public class PlayerAttack : MonoBehaviour
             if (!isAttacking)
             {
                 comboStep++;
+                whooshStep++;
                 StartCoroutine(AttackRoutine());
             }
             // Queue next combo step if allowed
@@ -67,8 +71,17 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttacking && Time.time - lastAttackTime > comboResetTime)
         {
             comboStep = 0;
+            whooshStep = 0;
+        }
+
+
+
+        if (whooshStep > 3)
+        {
+            whooshStep = 0;
         }
     }
+
 
     IEnumerator AttackRoutine()
     {
@@ -101,6 +114,21 @@ public class PlayerAttack : MonoBehaviour
             playerMovement.moveSpeed = originalMoveSpeed;
 
         isAttacking = false;
+
+        switch (whooshStep)
+        {
+            case 1:
+                AudioManager.instance.PlaySFX("Swoosh1");
+                break;
+
+            case 2:
+                AudioManager.instance.PlaySFX("Swoosh2");
+                break;
+
+            case 3:
+                AudioManager.instance.PlaySFX("Swoosh3");
+                break;
+        }
     }
 
 
@@ -116,7 +144,6 @@ public class PlayerAttack : MonoBehaviour
         return 0.5f; // fallback
     }
 
-    // --- Called by Animation Events ---
     public void EnableHitbox()
     {
         if (attackHitbox != null)

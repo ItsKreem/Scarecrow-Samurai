@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: cca7e41f5a76a4f4fa35ab845e5691d2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9931.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107e21f8a393ad247a98e9abe2911894
+      internalID: -1047961262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_1
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 9931.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c530a966fb57a994d898cf8f237e1c20
+      internalID: 964403328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_2
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 9931.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a280fb9c1bd251046ad505f2a642c1ab
+      internalID: -2140103689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_3
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 9931.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ed7fff355626b488a8999073c35e4f
+      internalID: 709176528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8690.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f60db560aea8de448fa111c5bbe6c3f
+      internalID: -1944224972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_5
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 8690.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbdb9cb2c129dc4f946c1eaed8ffcfc
+      internalID: -282153829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_6
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 8690.556
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8771724b417c958448297020c252fe04
+      internalID: 2111917588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7449.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e6463097198a248918239ddf979925
+      internalID: 1786921462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_8
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 7449.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b61ecb299a95ed42aed8f3575210056
+      internalID: -938554891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_9
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 7449.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdac39fbe0fd77469e0ef15439e20ee
+      internalID: -850746796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_10
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 7449.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c840dfa2e271374418cbef896ee05360
+      internalID: -1013557527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6208.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47589fff80a8ac1488ac1dbec8af8bc9
+      internalID: -2113437080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_12
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 6208.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048f3afda075b7140b742c7f34d9dd29
+      internalID: -584509303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_13
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 6208.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5a699a19aede44f91849cb5661e11f
+      internalID: -1229741512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_14
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 6208.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32869531dd2db4648bd9ac7dca505e95
+      internalID: 1744759502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4967.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bcfaf7ec28038419e66f4f1833f79b
+      internalID: -478253349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_16
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 4967.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88985caac91bc842a429f98451aadc7
+      internalID: 1614181429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_17
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4967.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef7b9139c9865944a6b1aee3d51af70
+      internalID: -1519034298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_18
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 4967.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c548dfe987297b46acc7d93fb97fd70
+      internalID: -624077981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3726.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d5bca3d7cab4440afafeae489349a2
+      internalID: -1656973045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_20
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3726.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8924b49f8c6216545a65780156ccc3ac
+      internalID: -435235084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_21
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3726.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e136cd50daf64eaee03ce41ed4f87
+      internalID: -1340030792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_22
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3726.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd59903fd5ecd643b713854b6abbde7
+      internalID: -306135219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2485.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb270b40a0f0214f88a65d9c1e188fa
+      internalID: 541440990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_24
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2485.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297bf8d92821fc8449b3c0892b17f6c0
+      internalID: -1400616418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_25
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 2485.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98f5a7566e0f7c4e8b0f3811199f9b9
+      internalID: -803122675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_26
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 2485.5557
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a8611944178034abbe16ec9f7308a8
+      internalID: -1604718284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1244.5555
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068ab38a4d49fd64987615008662865c
+      internalID: 1563606689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_28
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1244.5555
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c600ca671cdfb469dff1587fbe3732
+      internalID: -1598490598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_29
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1244.5555
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1361cb8d4030d2489b1d568f504bd82
+      internalID: -1720820715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_30
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 1244.5555
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b00749e1d123d64c9ad3480657da104
+      internalID: 1444750123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.555542
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0365bd89ef7c374080af73c0569718d
+      internalID: -1029411834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_32
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 3.555542
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a671f9dc0bd0bb245a9c3b669129e72f
+      internalID: 17557338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_33
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3.555542
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7dbabbe37020b47a237f96bbad8434
+      internalID: 602396233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yaksha animation arrange - Clap_34
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 3.555542
+        width: 1224.75
+        height: 1241.4445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265b1101410cb8c4d874dc6e183d33fa
+      internalID: -88300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      yaksha animation arrange - Clap_0: -1047961262
+      yaksha animation arrange - Clap_1: 964403328
+      yaksha animation arrange - Clap_10: -1013557527
+      yaksha animation arrange - Clap_11: -2113437080
+      yaksha animation arrange - Clap_12: -584509303
+      yaksha animation arrange - Clap_13: -1229741512
+      yaksha animation arrange - Clap_14: 1744759502
+      yaksha animation arrange - Clap_15: -478253349
+      yaksha animation arrange - Clap_16: 1614181429
+      yaksha animation arrange - Clap_17: -1519034298
+      yaksha animation arrange - Clap_18: -624077981
+      yaksha animation arrange - Clap_19: -1656973045
+      yaksha animation arrange - Clap_2: -2140103689
+      yaksha animation arrange - Clap_20: -435235084
+      yaksha animation arrange - Clap_21: -1340030792
+      yaksha animation arrange - Clap_22: -306135219
+      yaksha animation arrange - Clap_23: 541440990
+      yaksha animation arrange - Clap_24: -1400616418
+      yaksha animation arrange - Clap_25: -803122675
+      yaksha animation arrange - Clap_26: -1604718284
+      yaksha animation arrange - Clap_27: 1563606689
+      yaksha animation arrange - Clap_28: -1598490598
+      yaksha animation arrange - Clap_29: -1720820715
+      yaksha animation arrange - Clap_3: 709176528
+      yaksha animation arrange - Clap_30: 1444750123
+      yaksha animation arrange - Clap_31: -1029411834
+      yaksha animation arrange - Clap_32: 17557338
+      yaksha animation arrange - Clap_33: 602396233
+      yaksha animation arrange - Clap_34: -88300066
+      yaksha animation arrange - Clap_4: -1944224972
+      yaksha animation arrange - Clap_5: -282153829
+      yaksha animation arrange - Clap_6: 2111917588
+      yaksha animation arrange - Clap_7: 1786921462
+      yaksha animation arrange - Clap_8: -938554891
+      yaksha animation arrange - Clap_9: -850746796
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

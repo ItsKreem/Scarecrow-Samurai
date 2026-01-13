@@ -36,6 +36,8 @@ public class Health : GameManager
 
     public float fadeDelay = 0.5f;
 
+    private Rigidbody2D rb;
+
     public float CurrentHealth => _currentHealth;
 
     private PlayerMovement playerMovement;
@@ -45,6 +47,7 @@ public class Health : GameManager
         ResetHealthToMax();
         playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
@@ -104,6 +107,15 @@ public class Health : GameManager
 
     private IEnumerator HandleDeath()
     {
+        if (playerMovement != null)
+            playerMovement.enabled = false;
+
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.simulated = false;
+        }
+
         if (CompareTag("Player"))
         {
             Debug.Log("Player has died.");
@@ -182,6 +194,12 @@ public class Health : GameManager
     private IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(1f);
+        
+        if (playerMovement != null)
+            playerMovement.enabled = true;
+
+        if (rb != null)
+            rb.simulated = true;
 
         ResetHealthToMax();
 

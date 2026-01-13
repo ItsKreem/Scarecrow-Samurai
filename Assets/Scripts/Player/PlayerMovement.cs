@@ -185,6 +185,7 @@ public class PlayerMovement : GameManager
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && (isGrounded || allowAirDash))
         {
+            AudioManager.instance.PlaySFX("Dash");
             StartCoroutine(Dash());
         }
     }

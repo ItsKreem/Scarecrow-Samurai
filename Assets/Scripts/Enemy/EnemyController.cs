@@ -122,11 +122,11 @@ public class EnemyController : MonoBehaviour
 
         if (!IsGrounded()) { isLeaping = false; yield break; }
 
-        if (animator != null)
-            animator.Play("Enemy_Attack");
-
         Vector2 leapDir = (player.position - transform.position).normalized;
         leapDir.y = 1f;
+
+        if (animator != null)
+            animator.Play("Enemy_Attack");
 
         rb.AddForce(leapDir * leapForce, ForceMode2D.Impulse);
 
