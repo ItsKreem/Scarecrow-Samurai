@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: 8bf7f0b1770a35b4c82d3d5d50e39f28
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 10614
+        width: 2274
+        height: 1519
+      alignment: 9
+      pivot: {x: 0.49088907, y: 0.37383637}
+      border: {x: 0, y: 0, z: 0, w: 255}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c584380070ad19947a2b64219e608eea
+      internalID: 1790155521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 7928
+        y: 10649
+        width: 1603
+        height: 1463
+      alignment: 9
+      pivot: {x: 0.5118412, y: 0.461075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf4816e1e60e9e47ba5173940d02ec0
+      internalID: 1454335044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12
+      rect:
+        serializedVersion: 2
+        x: 7692
+        y: 2495
+        width: 1820
+        height: 1661
+      alignment: 9
+      pivot: {x: 0.5539481, y: 0.6064027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e23dbee41243a5479f1353346d54da2
+      internalID: -894209485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 2066
+        height: 1686
+      alignment: 9
+      pivot: {x: 0.53405416, y: 0.56098926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0213565d1cd86034f8402d611fab21a2
+      internalID: -769402485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 3853
+        y: 10616
+        width: 2332
+        height: 1188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48636ee55c8566640821fcb431ad02ed
+      internalID: 598126090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 4232
+        y: 8104
+        width: 1865
+        height: 1612
+      alignment: 9
+      pivot: {x: 0.41282308, y: 0.4203738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f33565315143e5469be04ab5e33a306
+      internalID: -1228894585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 8102
+        width: 1725
+        height: 1498
+      alignment: 9
+      pivot: {x: 0.5355572, y: 0.46387175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12960ba7da0946489888f51a7e1e6f4
+      internalID: 1490937674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6
+      rect:
+        serializedVersion: 2
+        x: 7934
+        y: 8030
+        width: 1755
+        height: 1623
+      alignment: 9
+      pivot: {x: 0.47723246, y: 0.39228812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f66bbc648dcae448429533890ac56b
+      internalID: 122970361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda tornado atk_18
+      rect:
+        serializedVersion: 2
+        x: 5194
+        y: 8081
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1593bb59a0867c4ca63cfe600fa7e11
+      internalID: -1038857085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 5560
+        width: 1679
+        height: 1682
+      alignment: 9
+      pivot: {x: 0.5055103, y: 0.37074018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269371b65f141ef47b5da9b75b8e9ca7
+      internalID: -1007914031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9
+      rect:
+        serializedVersion: 2
+        x: 7958
+        y: 5560
+        width: 1545
+        height: 1469
+      alignment: 9
+      pivot: {x: 0.5092625, y: 0.4147675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88c8559d387eb45badc4e380b17fc0
+      internalID: -1330372140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 4237
+        y: 5456
+        width: 1599
+        height: 1711
+      alignment: 9
+      pivot: {x: 0.50917196, y: 0.36285633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e2463d28202c849b52ce97e397b8ec
+      internalID: 1160810775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 2959
+        width: 2238
+        height: 1570
+      alignment: 9
+      pivot: {x: 0.515701, y: 0.37503746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d4590c60c7d0143a4b51cd1e82caba
+      internalID: 400429459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11
+      rect:
+        serializedVersion: 2
+        x: 3948
+        y: 2604
+        width: 1936
+        height: 1491
+      alignment: 9
+      pivot: {x: 0.5376143, y: 0.61163646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db71aa70029d1e47b204a77f51e2e5d
+      internalID: -411108658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14
+      rect:
+        serializedVersion: 2
+        x: 3799
+        y: 466
+        width: 2446
+        height: 1065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b084476131b455f4cbaecd745debddd5
+      internalID: 1180789573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 15
+      rect:
+        serializedVersion: 2
+        x: 7614
+        y: 0
+        width: 2265
+        height: 1662
+      alignment: 9
+      pivot: {x: 0.49999958, y: 0.5876733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea28fe863a04a04896c393eb8f87b5f
+      internalID: 577161555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1: 1790155521
+      10: 400429459
+      11: -411108658
+      12: -894209485
+      13: -769402485
+      14: 1180789573
+      15: 577161555
+      2: 598126090
+      3: 1454335044
+      4: 1490937674
+      5: -1228894585
+      6: 122970361
+      7: -1007914031
+      8: 1160810775
+      9: -1330372140
+      Garuda tornado atk_10: 421111796
+      Garuda tornado atk_12: -1028060179
+      Garuda tornado atk_15: 412734043
+      Garuda tornado atk_16: -1276523373
+      Garuda tornado atk_17: -1165256149
+      Garuda tornado atk_18: -1038857085
+      Garuda tornado atk_19: 2120066282
+      Garuda tornado atk_20: 550967410
+      Garuda tornado atk_21: -446211814
+      Garuda tornado atk_22: 1382402976
+      Garuda tornado atk_23: 816686987
+      Garuda tornado atk_24: -1625884885
+      Garuda tornado atk_26: 1936186838
+      Garuda tornado atk_27: 689530761
+      Garuda tornado atk_28: 1653153911
+      Garuda tornado atk_29: 414686635
+      Garuda tornado atk_30: 1469090684
+      Garuda tornado atk_31: 132485730
+      Garuda tornado atk_32: -503595790
+      Garuda tornado atk_34: -411494250
+      Garuda tornado atk_36: -1287757167
+      Garuda tornado atk_37: -715815335
+      Garuda tornado atk_38: -958254094
+      Garuda tornado atk_39: -1994294895
+      Garuda tornado atk_40: -127096890
+      Garuda tornado atk_41: 925387684
+      Garuda tornado atk_42: -1941785804
+      Garuda tornado atk_44: 988899954
+      Garuda tornado atk_45: -1329414033
+      Garuda tornado atk_47: 1072750687
+      Garuda tornado atk_48: 1993870044
+      Garuda tornado atk_49: -1864805051
+      Garuda tornado atk_5: -716070986
+      Garuda tornado atk_50: -489983143
+      Garuda tornado atk_51: -1485391787
+      Garuda tornado atk_52: 1025434709
+      Garuda tornado atk_53: 1757324865
+      Garuda tornado atk_54: -377393876
+      Garuda tornado atk_55: -1721754012
+      Garuda tornado atk_56: 1376832650
+      Garuda tornado atk_57: 1041962274
+      Garuda tornado atk_58: -1963513388
+      Garuda tornado atk_59: -924694833
+      Garuda tornado atk_6: -763461443
+      Garuda tornado atk_60: 1922199789
+      Garuda tornado atk_61: -352626963
+      Garuda tornado atk_62: 868310402
+      Garuda tornado atk_63: -693821563
+      Garuda tornado atk_64: -748838917
+      Garuda tornado atk_65: 1808725378
+      Garuda tornado atk_66: 1035292324
+      Garuda tornado atk_67: 905458590
+      Garuda tornado atk_68: 213190215
+      Garuda tornado atk_69: -724744924
+      Garuda tornado atk_7: 724618880
+      Garuda tornado atk_70: -1430799475
+      Garuda tornado atk_71: -2039767786
+      Garuda tornado atk_72: -1029982110
+      Garuda tornado atk_73: 113909388
+      Garuda tornado atk_74: -301985951
+      Garuda tornado atk_75: 836032081
+      Garuda tornado atk_78: 861328360
+      Garuda tornado atk_79: -1050892694
+      Garuda tornado atk_8: 1487622282
+      Garuda tornado atk_80: -2018046228
+      Garuda tornado atk_81: 1914279570
+      Garuda tornado atk_82: 1297847869
+      Garuda tornado atk_83: -335042893
+      Garuda tornado atk_84: 1158977727
+      Garuda tornado atk_85: 491030925
+      Garuda tornado atk_86: -343566144
+      Garuda tornado atk_9: -1344920741
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -23,6 +23,7 @@ public class Health : GameManager
     [Header("Effects & Audio")]
     public AudioSource HurtAudio;
     public GameObject hitVFX;
+    public GameObject healVFX;
 
     [Header("Stun Settings")]
     public float stunDuration = 0.5f; // How long the target stays stunned
@@ -194,7 +195,7 @@ public class Health : GameManager
     private IEnumerator RespawnPlayer()
     {
         yield return new WaitForSeconds(1f);
-        
+
         if (playerMovement != null)
             playerMovement.enabled = true;
 
@@ -217,6 +218,7 @@ public class Health : GameManager
     {
         _currentHealth = MaxHealth;
         _canDamage = true;
+
         if (CompareTag("Player"))
         {
             if (HealthBar == null)
@@ -224,6 +226,11 @@ public class Health : GameManager
 
             if (HealthBar != null)
                 HealthBar.SetMaxHealth(MaxHealth);
+        }
+
+        if (healVFX != null)
+        {
+            Instantiate(healVFX, transform.position, Quaternion.identity, transform);
         }
     }
 
@@ -239,7 +246,3 @@ public class Health : GameManager
         OnHitReset?.Invoke();
     }
 }
-
-
-
-

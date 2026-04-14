@@ -40,12 +40,16 @@ public class PlayerMovement : GameManager
 
     public Animator animator;
     private Rigidbody2D rb;
+    public TrailRenderer trailRenderer;
+    public GameObject groundParticles;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         if (animator == null)
             animator = GetComponent<Animator>();
+
+        //trailRenderer = GetComponent<TrailRenderer>();
     }
 
     void Update()
@@ -88,11 +92,13 @@ public class PlayerMovement : GameManager
 
         if (isGrounded)
         {
+            groundParticles.SetActive(true);
             canDoubleJump = true;
 
             // Only refresh dash if cooldown timer has expired
             if (dashCooldownTimer <= 0f)
                 canDash = true;
+            TurnOffTrailSmooth();
         }
     }
 
@@ -114,6 +120,8 @@ public class PlayerMovement : GameManager
     {
         if (Input.GetButtonDown("Jump"))
         {
+            groundParticles.SetActive(false);
+            TurnOnTrail();
             if (isGrounded)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -192,6 +200,7 @@ public class PlayerMovement : GameManager
 
     IEnumerator Dash()
     {
+        TurnOnTrail();
         canDash = false;
         isDashing = true;
 
@@ -221,6 +230,25 @@ public class PlayerMovement : GameManager
         rb.gravityScale = originalGravity;
         animator.SetBool("IsDashing", false);
         isDashing = false;
+
+        TurnOffTrailSmooth();
+    }
+
+    public void TurnOffTrailSmooth()
+    {
+        if (trailRenderer != null)
+        {
+            trailRenderer.emitting = false;
+        }
+    }
+
+    public void TurnOnTrail()
+    {
+        if (trailRenderer != null)
+        {
+
+            trailRenderer.emitting = true; 
+        }
     }
 
     void OnDrawGizmosSelected()

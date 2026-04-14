@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Round Settings")]
     public float preRoundDelay = 3f; // how long the text shows before spawning starts
-    public TMP_Text roundText; // reference to a TMP text element on your Canvas
+    public TMP_Text roundText; 
     private int currentRound = 1;
 
     private List<GameObject> spawnedFlyingEnemies = new List<GameObject>();

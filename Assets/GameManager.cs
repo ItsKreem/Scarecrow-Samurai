@@ -37,5 +37,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void PlayForestLevel()
+    {
+        SceneManager.LoadScene("ForestLevel");
+    }
 }
 

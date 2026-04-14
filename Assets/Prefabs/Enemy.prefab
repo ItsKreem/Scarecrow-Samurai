@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e218e58d81c3c43b25286edae6093c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 12
   player: {fileID: 0}
   leapTriggerDistance: 10
   waitBeforeLeap: 1
@@ -325,7 +325,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundRadius: 0.1
-  parriedSFX: {fileID: 4665265700734223146, guid: 11afed38d61446249ac07c5119d76eca, type: 3}
+  parryParticles: {fileID: 9074896029619454449, guid: 928afa4042456f647b770ca8156a53be, type: 3}
   animator: {fileID: 7332534049576485525}
 --- !u!114 &1763473002547030063
 MonoBehaviour:

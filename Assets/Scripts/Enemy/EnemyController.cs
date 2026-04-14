@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
     public float groundRadius = 0.2f;
 
     [Header("SFX")]
-    public GameObject parriedSFX;
+    public GameObject parryParticles;
 
     [Header("Animation")]
     public Animator animator;
@@ -69,9 +69,6 @@ public class EnemyController : MonoBehaviour
             MoveTowardPlayerLogic();
     }
 
-    // ------------------------------
-    //     NEW PLAYER-TRACKING LOGIC
-    // ------------------------------
     void MoveTowardPlayerLogic()
     {
         Vector2 pos = transform.position;
@@ -155,8 +152,11 @@ public class EnemyController : MonoBehaviour
     public void OnParried(Vector2 knockbackDir, float customKnockbackForce = -1f)
     {
 
-        if (parriedSFX != null)
-            Instantiate(parriedSFX, transform.position, Quaternion.identity);
+        if (parryParticles != null)
+        {
+            GameObject particles = Instantiate(parryParticles, transform.position, Quaternion.identity);
+            Destroy(particles, 2f); // clean up after 2 seconds
+        }
 
         StopAllCoroutines();
         isLeaping = false;

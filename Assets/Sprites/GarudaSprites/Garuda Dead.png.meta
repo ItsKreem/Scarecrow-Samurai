@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: 8d8a1c79d084e2d49b995e052c986633
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 10848
+        width: 2341
+        height: 1254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c801febbadf69f4e9ea3a0966073dd0
+      internalID: 1445731772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 4295
+        y: 10860
+        width: 2313
+        height: 1299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36d253a30845574fa79cdacfb852ab1
+      internalID: -1247971348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 7945
+        y: 10400
+        width: 1648
+        height: 1137
+      alignment: 9
+      pivot: {x: 0.8202444, y: 0.6811399}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b2e2eeb6aca8d4b84e94064c8b4aba
+      internalID: 1737385474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_6
+      rect:
+        serializedVersion: 2
+        x: 11129
+        y: 0
+        width: 28
+        height: 12735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adf8f131a056ac46b0dc88590ecd757
+      internalID: 385638577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 8093
+        width: 1548
+        height: 883
+      alignment: 9
+      pivot: {x: 0.83083504, y: 0.62675184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483306efa5fefe547821865a62381010
+      internalID: 79524091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 4363
+        y: 8093
+        width: 1542
+        height: 886
+      alignment: 9
+      pivot: {x: 0.83842987, y: 0.60203207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94e0e6e4649ee040ad9e1dc7e40d094
+      internalID: 2109788897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6
+      rect:
+        serializedVersion: 2
+        x: 8088
+        y: 8081
+        width: 1561
+        height: 900
+      alignment: 9
+      pivot: {x: 0.77627087, y: 0.64176863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509b845fb2a103f4d867c816c2ad0daa
+      internalID: -176855025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_15
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 8497
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b199d3384d58404fb216f4b3e9afe10
+      internalID: -1708683471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_17
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 8498
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255ec9e5007e92f4980dc16e02e7fd2f
+      internalID: -1954194673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_19
+      rect:
+        serializedVersion: 2
+        x: 9637
+        y: 8498
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f77cde167107042878cabbb68b4aa4
+      internalID: -859293011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_20
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 5967
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800aca7d17752d949b5ea038d50505d1
+      internalID: 335450129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 5545
+        width: 1766
+        height: 1149
+      alignment: 9
+      pivot: {x: 0.74548495, y: 0.45807707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f437fdb9161c58c4a93dc350dffbaa27
+      internalID: -757265507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 4326
+        y: 5550
+        width: 1747
+        height: 1187
+      alignment: 9
+      pivot: {x: 0.7260963, y: 0.45130268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fefd8add7b3c644a7a4c91007d7e6a
+      internalID: -175829142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9
+      rect:
+        serializedVersion: 2
+        x: 7997
+        y: 5699
+        width: 1853
+        height: 1119
+      alignment: 9
+      pivot: {x: 0.75475526, y: 0.32781214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c0548feef9fbc48bdf713eb47b842a
+      internalID: -204638312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_26
+      rect:
+        serializedVersion: 2
+        x: 8934
+        y: 5694
+        width: 129
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c219d1cabdbd4d045ae7def88c0e2a0d
+      internalID: -1008745522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11
+      rect:
+        serializedVersion: 2
+        x: 4332
+        y: 3255
+        width: 2388
+        height: 1436
+      alignment: 9
+      pivot: {x: 0.57113755, y: 0.18589847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91194e4dc386f04c9939c33d8d69a29
+      internalID: 218703694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 3193
+        width: 2102
+        height: 1330
+      alignment: 9
+      pivot: {x: 0.6142577, y: 0.25776055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8c9d1270a6f014aa7afc10073cbbed
+      internalID: 1684388079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_31
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3803
+        width: 149
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d9d5172d4e4a049917bab7f41f23d4
+      internalID: 744919344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garuda Dead_34
+      rect:
+        serializedVersion: 2
+        x: 4731
+        y: 3224
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e49bd020696d3840bb1970a225f521b
+      internalID: 1175389414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12
+      rect:
+        serializedVersion: 2
+        x: 7998
+        y: 2813
+        width: 2511
+        height: 1509
+      alignment: 9
+      pivot: {x: 0.5419078, y: 0.24430355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e310a6d39267c64f8e5e6e75ad4b6e4
+      internalID: -1014302281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 190
+        width: 3150
+        height: 1333
+      alignment: 9
+      pivot: {x: 0.5244981, y: 0.5052626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321f61ef3f5f02142a8caf577ce608cf
+      internalID: 1252816393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      1: 1445731772
+      10: 1684388079
+      11: 218703694
+      12: -1014302281
+      13: 1252816393
+      2: -1247971348
+      3: 1737385474
+      4: 79524091
+      5: 2109788897
+      6: -176855025
+      7: -757265507
+      8: -175829142
+      9: -204638312
+      Garuda Dead_0: 1869396337
+      Garuda Dead_10: 494156550
+      Garuda Dead_12: 92941484
+      Garuda Dead_13: 1471109032
+      Garuda Dead_14: 1176934973
+      Garuda Dead_15: -1708683471
+      Garuda Dead_16: -1539127828
+      Garuda Dead_17: -1954194673
+      Garuda Dead_18: -765103818
+      Garuda Dead_19: -859293011
+      Garuda Dead_20: 335450129
+      Garuda Dead_22: -716785723
+      Garuda Dead_24: -761756652
+      Garuda Dead_26: -1008745522
+      Garuda Dead_27: 1075722634
+      Garuda Dead_30: 1566060464
+      Garuda Dead_31: 744919344
+      Garuda Dead_32: -845567637
+      Garuda Dead_33: -706259360
+      Garuda Dead_34: 1175389414
+      Garuda Dead_35: 243131011
+      Garuda Dead_36: -827199306
+      Garuda Dead_37: 1839603417
+      Garuda Dead_38: -1042035881
+      Garuda Dead_39: -639989625
+      Garuda Dead_40: -2031098491
+      Garuda Dead_41: 423873816
+      Garuda Dead_6: 385638577
+      Garuda Dead_8: -1883638595
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

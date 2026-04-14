@@ -10,6 +10,9 @@ public class SavePoint : MonoBehaviour
     private static bool hasSavePoint = false;
     public Animator animator;
 
+    [Header("SFX")]
+    public GameObject healParticles;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -26,9 +29,26 @@ public class SavePoint : MonoBehaviour
         lastSavePosition = transform.position;
         hasSavePoint = true;
 
+        if (healParticles != null)
+        {
+            GameObject particles = Instantiate(healParticles, transform.position, Quaternion.identity);
 
+            Debug.Log("Particles spawned!");
 
-        // ✅ Reset player health to max
+            var ps = particles.GetComponent<ParticleSystem>();
+            if (ps != null)
+            {
+                ps.Play();
+            }
+            else
+            {
+                Debug.LogWarning("No ParticleSystem component found!");
+            }
+
+            Destroy(particles, 5f);
+        }
+
+        //Reset player health to max
         Health playerHealth = player.GetComponent<Health>();
         if (playerHealth != null)
         {
@@ -39,8 +59,6 @@ public class SavePoint : MonoBehaviour
         }
 
         Debug.Log("Save point activated at " + lastSavePosition);
-
-        // You can also add particle effects, sound, etc. here
     }
 
     public static Vector3 GetLastSavePosition()

@@ -129,5 +129,3 @@ public class EnemyProjectile : EnemyAttack
         return closest;
     }
 }
-
-

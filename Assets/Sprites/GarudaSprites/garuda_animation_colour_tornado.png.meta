@@ -1,0 +1,515 @@
+fileFormatVersion: 2
+guid: 8d4565722470447459c83ef4076857da
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_1
+      rect:
+        serializedVersion: 2
+        x: 7482
+        y: 5531
+        width: 1387
+        height: 1435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08526f3d39f54844f81319d931a2150a
+      internalID: -157049205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_5
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 5532
+        width: 1538
+        height: 1406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c466452addfd887478e684a6fc3be24e
+      internalID: 1052173645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 5532
+        width: 2186
+        height: 1165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efbc1da3be6a454996a888a1bb630f1
+      internalID: -959314548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_8
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 5533
+        width: 2232
+        height: 1112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ca414ab786f534fa5528bc9ab94790
+      internalID: 1526608656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3770
+        width: 1535
+        height: 1378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379ad5faa1f429b43acd52808a793e16
+      internalID: 1624438762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_10
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3770
+        width: 1537
+        height: 1378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e7840cd1eb2ac4f921099d184263aa
+      internalID: -1703151815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_11
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 3770
+        width: 1535
+        height: 1378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a733c5dcefaa29444a52147fa6675368
+      internalID: 1056943602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_12
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 3770
+        width: 1534
+        height: 1378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0daae23675e3f8d4589c66d3cb30e92c
+      internalID: 1583739450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_13
+      rect:
+        serializedVersion: 2
+        x: 7637
+        y: 3770
+        width: 1534
+        height: 1378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28aadace2c781bb4f98f6f16fcb545ab
+      internalID: 2026760692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_14
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 2259
+        width: 1473
+        height: 1411
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f99eb6927c9d64da2b196ee922d0f7
+      internalID: -1079050585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_15
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 2321
+        width: 2138
+        height: 1189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bea40217ff5f414492186354a0028eb
+      internalID: 384422695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_17
+      rect:
+        serializedVersion: 2
+        x: 4606
+        y: 1986
+        width: 1543
+        height: 1255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1c561bf946b54f8e51447dc153cb7
+      internalID: 325742513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_18
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 1969
+        width: 840
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33dff7aee8db2c46bdcadfa198006d5
+      internalID: -1378463795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_19
+      rect:
+        serializedVersion: 2
+        x: 7948
+        y: 1995
+        width: 940
+        height: 1246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d319d5568ff8d438d3352530636d76
+      internalID: -1361847567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_50
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 215
+        width: 2351
+        height: 1015
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7c10e84bce1514f84a09200de17a0d
+      internalID: 1824203612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: garuda_animation_colour_tornado_51
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 215
+        width: 2185
+        height: 1164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56983a239487bb140826f57ad0b865ff
+      internalID: -1601913179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      garuda_animation_colour_tornado_0: 457088411
+      garuda_animation_colour_tornado_1: -157049205
+      garuda_animation_colour_tornado_10: -1703151815
+      garuda_animation_colour_tornado_11: 1056943602
+      garuda_animation_colour_tornado_12: 1583739450
+      garuda_animation_colour_tornado_13: 2026760692
+      garuda_animation_colour_tornado_14: -1079050585
+      garuda_animation_colour_tornado_15: 384422695
+      garuda_animation_colour_tornado_16: -314532260
+      garuda_animation_colour_tornado_17: 325742513
+      garuda_animation_colour_tornado_18: -1378463795
+      garuda_animation_colour_tornado_19: -1361847567
+      garuda_animation_colour_tornado_2: -1781979926
+      garuda_animation_colour_tornado_20: -987147023
+      garuda_animation_colour_tornado_21: 1292944927
+      garuda_animation_colour_tornado_22: -1092875729
+      garuda_animation_colour_tornado_23: -430139847
+      garuda_animation_colour_tornado_24: 464704281
+      garuda_animation_colour_tornado_25: -74515992
+      garuda_animation_colour_tornado_26: 1039650315
+      garuda_animation_colour_tornado_27: 1601907161
+      garuda_animation_colour_tornado_28: 1115497590
+      garuda_animation_colour_tornado_29: 583264080
+      garuda_animation_colour_tornado_3: 239748870
+      garuda_animation_colour_tornado_30: 158362985
+      garuda_animation_colour_tornado_31: -124555914
+      garuda_animation_colour_tornado_32: -751277680
+      garuda_animation_colour_tornado_33: 757542104
+      garuda_animation_colour_tornado_34: 603295634
+      garuda_animation_colour_tornado_35: 1350105853
+      garuda_animation_colour_tornado_36: 1372995171
+      garuda_animation_colour_tornado_37: -680379236
+      garuda_animation_colour_tornado_38: -482026615
+      garuda_animation_colour_tornado_39: -988837048
+      garuda_animation_colour_tornado_4: -1767856126
+      garuda_animation_colour_tornado_40: -1317643240
+      garuda_animation_colour_tornado_41: 1016711679
+      garuda_animation_colour_tornado_42: 2123652614
+      garuda_animation_colour_tornado_43: 498072118
+      garuda_animation_colour_tornado_44: 117107060
+      garuda_animation_colour_tornado_45: 1339746845
+      garuda_animation_colour_tornado_46: -606450283
+      garuda_animation_colour_tornado_47: -2029249564
+      garuda_animation_colour_tornado_48: 2075512505
+      garuda_animation_colour_tornado_49: -1226008319
+      garuda_animation_colour_tornado_5: 1052173645
+      garuda_animation_colour_tornado_50: 1824203612
+      garuda_animation_colour_tornado_51: -1601913179
+      garuda_animation_colour_tornado_6: -1503065818
+      garuda_animation_colour_tornado_7: -959314548
+      garuda_animation_colour_tornado_8: 1526608656
+      garuda_animation_colour_tornado_9: 1624438762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
